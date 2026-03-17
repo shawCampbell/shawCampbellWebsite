@@ -1,6 +1,4 @@
-/* Header Styling */
-
-/* Header Styling */
+/*** Header Styling ***/
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
@@ -14,15 +12,16 @@
 .container {
     border-bottom-color: #262627;
     border-bottom-width: 50px;
-    /* background-color: antiquewhite; */
 }
 
+/* *** */
+
 .image-of-me{
-    padding-top: 30px;
-    border-radius: 50%;
+    width: 200px;
     height: 200px;
-    border-width: 15px;
-    border-color: red;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .name {
@@ -40,17 +39,16 @@
 }
 
 button {
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: white;
+    color:#6e6e6e
 }
 
 button > * {
     margin-right: 5px;
 }
 
-button {
-    color:#6e6e6e
-}
+
 
 .container-links {
     display:flex;
@@ -64,10 +62,6 @@ button {
     gap: 20px;
     padding-bottom: 50px;
 }
-
-/* .container-home-art > * {
-    width: 25%;
-} */
 
 .home-img > *{
     width: 200px;
@@ -94,12 +88,12 @@ button {
     }
 
     .image-of-me{
-        padding-top: 30px;
-        border-radius: 50%;
-        height: 300px;
-        border-width: 15px;
-        border-color: red;
-    }
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+        }
 
     .name {
         font-family: "Libre Baskerville", serif;
@@ -116,21 +110,14 @@ button {
     }
 
     button {
-        border-radius: 10%;
         background-color: white;
+        color:#6e6e6e;
+        font-size: 50px;
     }
 
     button > * {
         margin-right: 5px;
         height: 50px;
-    }
-
-    button {
-        color:#6e6e6e;
-        font-size: 50px;
-        border-color: #262627;
-        border-style: solid;
-        border-width: 3px;
     }
 
     .container-links {
@@ -151,5 +138,6 @@ button {
         height: auto;
         border-color: #262627;
         border-width: 20px;
+        border-radius: 50px !important;
     }
 }
