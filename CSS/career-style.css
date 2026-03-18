@@ -134,11 +134,12 @@ img {
         display:grid;
         padding-bottom: 12%;
         grid-template-columns: 10% 90%;
-        width: 80%;
-        padding-left: 10%;
+        width: 97%;
+        padding-left: 2.5%;
         /* padding-right: 20%; */
         padding-top: 4%;
         height: 12vh;
+        margin-bottom: 80px; 
     }
 
     .company-card {
@@ -156,7 +157,7 @@ img {
     }
 
     .explanation-item {
-        font-size: 0.9rem;
+        font-size: 1.7rem;
         color: #383839;
         font-weight: 600;
     }
@@ -164,19 +165,33 @@ img {
     .skills-item {
         padding-bottom: 5px;
         color: #8888f7;
+        font-size: 1.7rem;
     }
 
     .location-item {
-        font-size: 0.85rem;
+        font-size: 1.7rem;
         font-weight: 400;
     }
 
     .add_30_for_mobile {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .add_50_for_mobile {
-        margin-bottom: 50px;
+        margin-bottom: 130px;
+    }
+
+    .date {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .badge {
+        font-size: 22px;
+    }
+
+    .reduce-mb-for-mobile{
+        margin-bottom: 5px;
     }
 
 
