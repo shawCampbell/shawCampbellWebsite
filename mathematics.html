@@ -123,9 +123,10 @@
 
       /* --- Cover image --- */
       .book-cover-wrap {
-        width: 100%;
+        width: 50%;
         margin-bottom: 1.4rem;
         border: 1px solid #e4e4e0;
+        box-shadow:#262627;
       }
       .book-cover-wrap img {
         width: 100%;
@@ -437,7 +438,7 @@
       </div>
 
       <div class="section-nav">
-        <a href="#soln" class="section-link">
+        <a href="#completed" class="section-link">
           <span>Written Solutions</span>
           <svg viewBox="0 0 24 24">
             <path d="M8 10l4 4 4-4" />
@@ -460,15 +461,16 @@
           <!-- ── BOOK 1: Real Analysis ── -->
           <div class="col-4">
             <div class="book-card">
+              
               <!-- Stats -->
               <div class="book-stats">
                 <div class="stat-block">
                   <span class="stat-label">Status</span>
-                  <span class="stat-value status-reading">Reading Ch. 3</span>
+                  <span class="stat-value status-reading">Completing Ch2 Excercises</span>
                 </div>
                 <div class="stat-block">
-                  <span class="stat-label">Completed</span>
-                  <span class="stat-value">2 / 8 ch.</span>
+                  <span id="completed" class="stat-label">Completed</span>
+                  <span class="stat-value">0 / 5 ch.</span>
                 </div>
               </div>
 
@@ -583,25 +585,21 @@
                   </h2>
                   <div id="ra-ch2" class="accordion-collapse collapse show">
                     <div class="accordion-body">
-                      <ul class="pdf-link-list">
-                        <li>
-                          <a href="#">
-                            <span class="pdf-icon"></span>
-                            Exercises 2.1 – 2.8
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <span class="pdf-icon"></span>
-                            Exercises 2.9 – 2.15
-                          </a>
-                        </li>
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                <div class="accordion-item">
+                <!-- <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button
                       class="accordion-button collapsed"
@@ -624,9 +622,9 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="accordion-item">
+                <!-- <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button
                       class="accordion-button collapsed"
@@ -650,7 +648,7 @@
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <!-- /accordion -->
             </div>
@@ -826,7 +824,7 @@
                 </div>
                 <div class="stat-block">
                   <span class="stat-label">Completed</span>
-                  <span class="stat-value">0 / 7 ch.</span>
+                  <span class="stat-value">0 / 11 ch.</span>
                 </div>
               </div>
 
@@ -1110,20 +1108,33 @@
     </script>
 
     <script>
-      function handleGate(e) {
-        if (e.key === "Enter") {
-          const input = document.getElementById("gate-input").value;
+const PASSWORD = "hilbertSpace";
+const STORAGE_KEY = "siteUnlocked";
 
-          if (input === "hilbertSpace") {
-            document.getElementById("gate").style.display = "none";
-            document.getElementById("protected-content").style.display =
-              "block";
-          } else {
-            document.getElementById("gate-error").textContent =
-              "Incorrect password";
-          }
-        }
-      }
-    </script>
+// Run on page load
+window.onload = function () {
+  if (localStorage.getItem(STORAGE_KEY) === "true") {
+    unlockPage();
+  }
+};
+
+function handleGate(e) {
+  if (e.key === "Enter") {
+    const input = document.getElementById("gate-input").value;
+
+    if (input === PASSWORD) {
+      localStorage.setItem(STORAGE_KEY, "true"); // <-- persist access
+      unlockPage();
+    } else {
+      document.getElementById("gate-error").textContent = "Incorrect password";
+    }
+  }
+}
+
+function unlockPage() {
+  document.getElementById("gate").style.display = "none";
+  document.getElementById("protected-content").style.display = "block";
+}
+</script>
   </body>
 </html>
