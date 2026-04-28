@@ -17,13 +17,18 @@
 /* *** */
 
 img {
-    height: 600px;
+    height: 500px;
 }
+
+body {
+    background-color: #fafaf8;
+}
+
 
 .book-container {
     width: 90%;
     padding-top: 50px;
-    margin-left: 10%;
+    margin-left: 12%;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -32,7 +37,21 @@ img {
 
 .description {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight:350;
     color: #8c8c8d;
+}
+
+
+body {
+font-family: "Libre Baskerville", serif;
+background-color: #fafaf8;
+color: #262627;
+}
+
+h1 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.85rem;
 }

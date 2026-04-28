@@ -5,6 +5,10 @@
     background-color: #262627;
 }
 
+body {
+    background-color: #fafaf8;
+}
+
 .nav-link{
     color: #262627;
 }
@@ -33,7 +37,7 @@
 
 .description {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight:350;
     color: #8c8c8d;
 }
@@ -68,6 +72,27 @@ button > * {
     height: auto;
     border-color: #262627;
     border-width: 20px;
+}
+
+p {
+font-size: 1.02rem;
+color: #555;
+line-height: 1.8;
+font-style: italic;
+}
+
+.name {
+        font-size: 1.9rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.85rem;
+        text-align: center;
+}
+
+body {
+font-family: "Libre Baskerville", serif;
+background-color: #fafaf8;
+color: #262627;
 }
 
 @media (max-width: 1000px) {
@@ -141,3 +166,4 @@ button > * {
         border-radius: 50px !important;
     }
 }
+

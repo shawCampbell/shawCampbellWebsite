@@ -5,6 +5,11 @@
     background-color: #262627;
 }
 
+body {
+    background-color: #fafaf8;
+}
+
+
 .nav-link{
     color: #262627;
 }
@@ -13,6 +18,13 @@
     border-bottom-color: #262627;
     border-bottom-width: 50px;
 }
+
+img {
+    height: 500px;
+    margin-left: 5%;
+}
+
+
 
 /* *** */
 
@@ -31,9 +43,3 @@
     }
 }
 
-.description {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight:350;
-    color: #8c8c8d;
-}

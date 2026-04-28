@@ -17,8 +17,13 @@
 /* *** */
 
 img {
-    height: 600px;
+    height: 400px;
 }
+
+body {
+    background-color: #fafaf8;
+}
+
 
 .art-container {
     width: 90%;
@@ -27,12 +32,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    gap: 10px;
+    gap: 50px;
 }
 
-.description {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight:350;
-    color: #8c8c8d;
-}

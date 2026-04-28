@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shaw Campbell — Mathematics</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* =====================
+         Inherited site styles
+         ===================== */
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        color: var(--bs-nav-pills-link-active-color);
+        background-color: #262627;
+      }
+      .nav-link {
+        color: #262627;
+      }
+      .container {
+        border-bottom-color: #262627;
+        border-bottom-width: 50px;
+      }
+      .description {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 350;
+        color: #8c8c8d;
+      }
+
+      /* =====================
+         Page-level typography
+         ===================== */
+      body {
+        font-family: "Libre Baskerville", serif;
+        background-color: #fafaf8;
+        color: #262627;
+      }
+
+      /* =====================
+         Intro section
+         ===================== */
+      .page-intro {
+        max-width: 680px;
+        margin: 3rem auto 3.5rem;
+        text-align: center;
+      }
+      .page-intro h1 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.85rem;
+      }
+      .page-intro p {
+        font-size: 1.02rem;
+        color: #555;
+        line-height: 1.8;
+        font-style: italic;
+      }
+
+      /* =====================
+         Book columns
+         ===================== */
+      .books-row {
+        gap: 2rem;
+      }
+
+      .book-card {
+        background: #fff;
+        border: 1px solid #e4e4e0;
+        border-radius: 4px;
+        padding: 1.6rem 1.4rem 2rem;
+      }
+
+      /* --- Stats strip above cover --- */
+      .book-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.1rem;
+        gap: 0.5rem;
+      }
+      .stat-block {
+        flex: 1;
+        text-align: center;
+        border: 1px solid #e4e4e0;
+        border-radius: 3px;
+        padding: 0.45rem 0.3rem;
+      }
+      .stat-label {
+        font-size: 0.62rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #999;
+        display: block;
+        margin-bottom: 0.2rem;
+      }
+      .stat-value {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: #262627;
+        display: block;
+        line-height: 1.2;
+      }
+      .stat-value.status-reading {
+        color: #2a6ebb;
+      }
+      .stat-value.status-complete {
+        color: #2e7d4f;
+      }
+      .stat-value.status-upcoming {
+        color: #999;
+      }
+
+      /* --- Cover image --- */
+      .book-cover-wrap {
+        width: 100%;
+        margin-bottom: 1.4rem;
+        border: 1px solid #e4e4e0;
+      }
+      .book-cover-wrap img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* --- Chapter accordion --- */
+      .chapter-accordion .accordion-button {
+        font-family: "Libre Baskerville", serif;
+        font-size: 0.88rem;
+        color: #262627;
+        background-color: #fafaf8;
+        padding: 0.6rem 0.9rem;
+        box-shadow: none;
+      }
+      .chapter-accordion .accordion-button:not(.collapsed) {
+        background-color: #f2f2ee;
+        color: #262627;
+        box-shadow: none;
+      }
+      .chapter-accordion .accordion-button::after {
+        filter: grayscale(1);
+      }
+      .chapter-accordion .accordion-item {
+        border-color: #e4e4e0;
+        border-radius: 0 !important;
+        margin-bottom: 0.3rem;
+        overflow: hidden;
+        border-radius: 3px !important;
+      }
+      .chapter-accordion .accordion-body {
+        padding: 0.7rem 0.9rem;
+        background: #fff;
+      }
+
+      /* --- PDF links --- */
+      .pdf-link-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .pdf-link-list li {
+        margin-bottom: 0.35rem;
+      }
+      .pdf-link-list a {
+        color: #1a5fa8;
+        text-decoration: none;
+        font-size: 0.84rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .pdf-link-list a:hover {
+        text-decoration: underline;
+        color: #0d3d6e;
+      }
+      .pdf-icon {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        /* inline SVG PDF icon */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231a5fa8'%3E%3Cpath d='M20 2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14a2 2 0 0 0 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+      }
+
+      /* =====================
+         Study log
+         ===================== */
+      .log-section {
+        margin-top: 4rem;
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4rem;
+      }
+      .log-section h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        border-bottom: 1px solid #e4e4e0;
+        padding-bottom: 0.6rem;
+        margin-bottom: 1.8rem;
+      }
+      .log-entry {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #f0f0ec;
+      }
+      .log-entry:last-child {
+        border-bottom: none;
+      }
+      .log-date {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #aaa;
+        margin-bottom: 0.5rem;
+      }
+      .log-text {
+        font-size: 0.97rem;
+        color: #3a3a3a;
+        line-height: 1.85;
+        font-style: italic;
+        margin: 0;
+      }
+
+      /* =====================
+         Section heading
+         ===================== */
+      .section-heading {
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #aaa;
+        margin-bottom: 0.8rem;
+        margin-top: 1.6rem;
+      }
+
+      .section-nav {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin: 2.5rem 0 3rem;
+      }
+
+      .section-nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2.5rem 0 3rem;
+      }
+
+      .section-link {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        min-width: 160px;
+        padding: 0.9rem 1.2rem;
+
+        text-decoration: none;
+        color: #262627;
+
+        font-size: 0.85rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+
+        background: #ffffff;
+        border: 1px solid #d8d8d3;
+        border-radius: 10px; /* <-- key change */
+
+        box-shadow: 0 7px 7px rgba(0, 0, 0, 0.6);
+
+        transition: all 0.18s ease;
+      }
+
+      .section-link svg {
+        width: 24px;
+        height: 24px;
+        stroke: #666;
+        stroke-width: 4;
+        fill: none;
+
+        transition:
+          transform 0.18s ease,
+          stroke 0.18s ease;
+      }
+
+      /* Hover = clearer affordance */
+      .section-link:hover {
+        border-color: #bfbfbb;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
+      }
+
+      .section-link:hover svg {
+        transform: translateY(4px);
+        stroke: #262627;
+      }
+
+      /* Click feel */
+      .section-link:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      }
+
+      #gate {
+        position: fixed;
+        inset: 0;
+        background: #fafaf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .gate-box {
+        text-align: center;
+        border: 1px solid #e4e4e0;
+        padding: 2rem 2.5rem;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      }
+
+      .gate-title {
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8c8c8d;
+        margin-bottom: 1rem;
+      }
+
+      #gate-input {
+        font-family: "Libre Baskerville", serif;
+        padding: 0.5rem 0.7rem;
+        border: 1px solid #d8d8d3;
+        border-radius: 4px;
+        outline: none;
+        width: 200px;
+        text-align: center;
+      }
+
+      #gate-input:focus {
+        border-color: #262627;
+      }
+
+      #gate-error {
+        margin-top: 0.7rem;
+        font-size: 0.75rem;
+        color: #a94442;
+        height: 1rem;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ========================
+         Navbar (site-consistent)
+         ======================== -->
+    <section>
+      <div class="container">
+        <header class="d-flex justify-content-center py-3 border-bottom">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="./career.html" class="nav-link">Career</a>
+            </li>
+            <li class="nav-item">
+              <a href="./reading.html" class="nav-link">Reading</a>
+            </li>
+            <li class="nav-item">
+              <a href="./art.html" class="nav-link">Art</a>
+            </li>
+            <li class="nav-item">
+              <a href="./thesis.html" class="nav-link">Honours Thesis</a>
+            </li>
+            <li class="nav-item" aria-current="page">
+              <a href="./mathematics.html" class="nav-link active">
+                Mathematics Self Study
+              </a>
+            </li>
+          </ul>
+        </header>
+      </div>
+    </section>
+
+    <div id="gate">
+      <div class="gate-box">
+        <p class="gate-title">Restricted Access</p>
+        <input
+          type="password"
+          id="gate-input"
+          placeholder="Enter password"
+          onkeydown="handleGate(event)"
+          autofocus
+        />
+        <p id="gate-error"></p>
+      </div>
+    </div>
+
+    <div id="protected-content" style="display: none">
+      <!-- ALL your current page content goes here -->
+      <!-- ========================
+         Intro
+         ======================== -->
+      <div class="page-intro px-3">
+        <h1>Mathematics Self Study</h1>
+        <p class="description" style="font-size: 1rem; margin-top: 0.5rem">
+          In preparation for the Master of Financial Engineering at UCT, I am
+          working through real analysis and stochastic calculus independently.
+          This page documents that progress honestly — chapter by chapter,
+          problem by problem. Handwritten solutions are available to download
+          below.
+        </p>
+      </div>
+
+      <div class="section-nav">
+        <a href="#soln" class="section-link">
+          <span>Written Solutions</span>
+          <svg viewBox="0 0 24 24">
+            <path d="M8 10l4 4 4-4" />
+          </svg>
+        </a>
+
+        <a href="#log" class="section-link">
+          <span>Dated Study Log</span>
+          <svg viewBox="0 0 24 24">
+            <path d="M8 10l4 4 4-4" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- ========================
+         Book columns
+         ======================== -->
+      <div class="container-fluid px-4 mb-5">
+        <div class="row gap-1 books-row flex-nowrap">
+          <!-- ── BOOK 1: Real Analysis ── -->
+          <div class="col-4">
+            <div class="book-card">
+              <!-- Stats -->
+              <div class="book-stats">
+                <div class="stat-block">
+                  <span class="stat-label">Status</span>
+                  <span class="stat-value status-reading">Reading Ch. 3</span>
+                </div>
+                <div class="stat-block">
+                  <span class="stat-label">Completed</span>
+                  <span class="stat-value">2 / 8 ch.</span>
+                </div>
+              </div>
+
+              <!-- Cover -->
+              <div class="book-cover-wrap">
+                <img
+                  src="./assets/maths-images/RA.png"
+                  alt="Real Analysis — P. Ouwehand"
+                />
+              </div>
+
+              <p
+                style="
+                  font-size: 0.82rem;
+                  color: #777;
+                  text-align: center;
+                  margin-top: -0.8rem;
+                  margin-bottom: 1.2rem;
+                  font-style: italic;
+                "
+                id="soln"
+              >
+                Real Analysis — P. Ouwehand
+              </p>
+
+              <!-- Chapters -->
+              <!-- <p class="section-heading">Written Solutions</p>
+            <button onclick="expandAll1()" class="btn btn-sm btn-primary inline">
+                Expand All
+            </button> -->
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p
+                  class="section-heading"
+                  style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                  id="solutions"
+                >
+                  Written Solutions By
+                </p>
+
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    id="toggleAll1"
+                    onchange="toggleAll1(this)"
+                    checked
+                  />
+                  <span id="toggleLabel1">Expand All</span>
+                </label>
+              </div>
+              <p
+                class="section-heading"
+                style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+              >
+                chapter
+              </p>
+              <div class="accordion chapter-accordion" id="ra-accordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ra-ch1"
+                    >
+                      1 — The Real Number System
+                    </button>
+                  </h2>
+                  <div id="ra-ch1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul class="pdf-link-list">
+                        <li>
+                          <a href="#">
+                            <span class="pdf-icon"></span>
+                            Exercises 1.1 – 1.6
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="pdf-icon"></span>
+                            Exercises 1.7 – 1.12
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ra-ch2"
+                    >
+                      2 — Sequences and Series
+                    </button>
+                  </h2>
+                  <div id="ra-ch2" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul class="pdf-link-list">
+                        <li>
+                          <a href="#">
+                            <span class="pdf-icon"></span>
+                            Exercises 2.1 – 2.8
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="pdf-icon"></span>
+                            Exercises 2.9 – 2.15
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ra-ch3"
+                    >
+                      3 — Continuity
+                    </button>
+                  </h2>
+                  <div id="ra-ch3" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul class="pdf-link-list">
+                        <li>
+                          <a href="#" style="color: #aaa; pointer-events: none">
+                            <span class="pdf-icon" style="opacity: 0.4"></span>
+                            In progress
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ra-ch4"
+                    >
+                      4 — Differentiation
+                    </button>
+                  </h2>
+                  <div id="ra-ch4" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /accordion -->
+            </div>
+            <!-- /book-card -->
+          </div>
+          <!-- /col -->
+
+          <!-- ── BOOK 2: Shreve I ── -->
+          <div class="col-4">
+            <div class="book-card">
+              <div class="book-stats">
+                <div class="stat-block">
+                  <span class="stat-label">Status</span>
+                  <span class="stat-value status-upcoming"
+                    >Not yet started</span
+                  >
+                </div>
+                <div class="stat-block">
+                  <span class="stat-label">Completed</span>
+                  <span class="stat-value">0 / 6 ch.</span>
+                </div>
+              </div>
+
+              <div class="book-cover-wrap">
+                <img
+                  src="./assets/maths-images/SH1.png"
+                  alt="Stochastic Calculus for Finance I — Shreve"
+                />
+              </div>
+
+              <p
+                style="
+                  font-size: 0.82rem;
+                  color: #777;
+                  text-align: center;
+                  margin-top: -0.8rem;
+                  margin-bottom: 1.2rem;
+                  font-style: italic;
+                "
+              >
+                Stochastic Calculus for Finance I — S. E. Shreve
+              </p>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p
+                  class="section-heading"
+                  style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                >
+                  Written Solutions By
+                </p>
+
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    id="toggleAll2"
+                    onchange="toggleAll2(this)"
+                    checked
+                  />
+                  <span id="toggleLabel2">Expand All</span>
+                </label>
+              </div>
+              <p
+                class="section-heading"
+                style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+              >
+                chapter
+              </p>
+              <div class="accordion chapter-accordion" id="s1-accordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#s1-ch1"
+                    >
+                      1 — The Binomial No-Arbitrage Pricing Model
+                    </button>
+                  </h2>
+                  <div id="s1-ch1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#s1-ch2"
+                    >
+                      2 — Probability Theory on Coin Toss Space
+                    </button>
+                  </h2>
+                  <div id="s1-ch2" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#s1-ch3"
+                    >
+                      3 — State Prices
+                    </button>
+                  </h2>
+                  <div id="s1-ch3" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── BOOK 3: Shreve II ── -->
+          <div class="col-4">
+            <div class="book-card">
+              <div class="book-stats">
+                <div class="stat-block">
+                  <span class="stat-label">Status</span>
+                  <span class="stat-value status-upcoming"
+                    >Not yet started</span
+                  >
+                </div>
+                <div class="stat-block">
+                  <span class="stat-label">Completed</span>
+                  <span class="stat-value">0 / 7 ch.</span>
+                </div>
+              </div>
+
+              <div class="book-cover-wrap">
+                <img
+                  src="./assets/maths-images/SH2.png"
+                  alt="Stochastic Calculus for Finance II — Shreve"
+                />
+              </div>
+
+              <p
+                style="
+                  font-size: 0.82rem;
+                  color: #777;
+                  text-align: center;
+                  margin-top: -0.8rem;
+                  margin-bottom: 1.2rem;
+                  font-style: italic;
+                "
+              >
+                Stochastic Calculus for Finance II — S. E. Shreve
+              </p>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p
+                  class="section-heading"
+                  style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                >
+                  Written Solutions By
+                </p>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    id="toggleAll1"
+                    onchange="toggleAll3(this)"
+                    checked
+                  />
+                  <span id="toggleLabel3">Expand All</span>
+                </label>
+              </div>
+              <p
+                class="section-heading"
+                style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+              >
+                chapter
+              </p>
+              <div class="accordion chapter-accordion" id="s2-accordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#s2-ch1"
+                    >
+                      1 — General Probability Theory
+                    </button>
+                  </h2>
+                  <div id="s2-ch1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#s2-ch2"
+                    >
+                      2 — Information and Conditioning
+                    </button>
+                  </h2>
+                  <div id="s2-ch2" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#s2-ch3"
+                    >
+                      3 — Brownian Motion
+                    </button>
+                  </h2>
+                  <div id="s2-ch3" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          font-size: 0.82rem;
+                          color: #bbb;
+                          font-style: italic;
+                        "
+                      >
+                        Not yet started.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+
+      <!-- ========================
+         Study Log
+         ======================== -->
+      <div class="container">
+        <div class="log-section">
+          <h2 id="log">Study Log</h2>
+
+          <div class="log-entry">
+            <p class="log-date">24 April 2026</p>
+            <p class="log-text">
+              Worked through the completeness axiom and the Archimedean property
+              today. What strikes me is how much weight the field axioms are
+              carrying — I keep finding myself wanting to ask <em>why</em> they
+              are the way they are, rather than simply accepting them as given.
+              This has made me want to look at abstract algebra at some point,
+              just to understand what is truly load-bearing in the structure of
+              ℝ versus what is more contingent.
+            </p>
+          </div>
+
+          <div class="log-entry">
+            <p class="log-date">17 April 2026</p>
+            <p class="log-text">
+              Started the Ouwehand notes properly. The construction of ℝ from
+              the rationals via Dedekind cuts is something I had seen gesturally
+              before but never rigorously. The proof that √2 ∉ ℚ felt almost too
+              clean — I went back and read it three times. Good sign, I think.
+            </p>
+          </div>
+
+          <div class="log-entry">
+            <p class="log-date">10 April 2026</p>
+            <p class="log-text">
+              First session. Set up this page. Emailed Professor Taylor, who was
+              kind enough to share the notes used in FTX5058F and confirm that
+              Shreve I and II are the primary references. Beginning with real
+              analysis as a foundation before touching stochastic calculus — the
+              plan is sequences and series first, then continuity, then into
+              Shreve once the ε-δ machinery feels natural.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function expandAll1() {
+        document
+          .querySelectorAll("#ra-accordion .accordion-collapse")
+          .forEach((el) => {
+            new bootstrap.Collapse(el, { show: true });
+          });
+      }
+
+      function collapseAll1() {
+        document
+          .querySelectorAll("#s1-accordion .accordion-collapse")
+          .forEach((el) => {
+            new bootstrap.Collapse(el, { toggle: false }).hide();
+          });
+      }
+    </script>
+    <script>
+      function toggleAll1(checkbox) {
+        const items = document.querySelectorAll(
+          "#ra-accordion .accordion-collapse",
+        );
+
+        items.forEach((el) => {
+          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {
+            toggle: false,
+          });
+
+          if (checkbox.checked) {
+            bsCollapse.show();
+          } else {
+            bsCollapse.hide();
+          }
+        });
+
+        // Update label text
+        // document.getElementById("toggleLabel1").textContent = checkbox.checked
+        //   ? "Collapse All"
+        //   : "Expand All";
+      }
+    </script>
+    <script>
+      function toggleAll2(checkbox) {
+        const items = document.querySelectorAll(
+          "#s1-accordion .accordion-collapse",
+        );
+
+        items.forEach((el) => {
+          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {
+            toggle: false,
+          });
+
+          if (checkbox.checked) {
+            bsCollapse.show();
+          } else {
+            bsCollapse.hide();
+          }
+        });
+
+        // Update label text
+        // document.getElementById("toggleLabel2").textContent = checkbox.checked
+        //   ? "Collapse All"
+        //   : "Expand All";
+      }
+    </script>
+    <script>
+      function toggleAll3(checkbox) {
+        const items = document.querySelectorAll(
+          "#s2-accordion .accordion-collapse",
+        );
+
+        items.forEach((el) => {
+          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {
+            toggle: false,
+          });
+
+          if (checkbox.checked) {
+            bsCollapse.show();
+          } else {
+            bsCollapse.hide();
+          }
+        });
+
+        // Update label text
+        // document.getElementById("toggleLabel3").textContent = checkbox.checked
+        //   ? "Collapse All"
+        //   : "Expand All";
+      }
+    </script>
+
+    <script>
+      function handleGate(e) {
+        if (e.key === "Enter") {
+          const input = document.getElementById("gate-input").value;
+
+          if (input === "hilbertSpace") {
+            document.getElementById("gate").style.display = "none";
+            document.getElementById("protected-content").style.display =
+              "block";
+          } else {
+            document.getElementById("gate-error").textContent =
+              "Incorrect password";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
