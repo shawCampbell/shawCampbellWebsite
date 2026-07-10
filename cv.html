@@ -919,9 +919,8 @@
   <script>
     (function() {
       const stored = localStorage.getItem("theme");
-      if (stored !== "light") {
+      if (stored === "dark") {
         document.documentElement.setAttribute("data-theme", "dark");
-        if (!stored) localStorage.setItem("theme", "dark");
       }
     })();
 
