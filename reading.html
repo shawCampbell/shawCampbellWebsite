@@ -29,6 +29,9 @@
               <a href="./index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
+              <a href="./projects.html" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
               <a href="./career.html" class="nav-link">Career</a>
             </li>
             <li class="nav-item">
@@ -50,6 +53,9 @@
                 >Self Study</a
               >
             </li>
+            <li class="nav-item">
+              <button class="theme-toggle-nav" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
+            </li>
           </ul>
         </header>
       </div>
@@ -60,20 +66,40 @@
       <h1 class="description">Shown are many of the books I have read.</h1>
 
       <div class="book-container">
-        <div><img class = "shadow"  src="./assets/reading-images/Einsteing.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/Design Principles.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/Steve Jobs.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/Code2Complete.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/50PhysicsIdeas.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/ElonMusk.png" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/Einsteing.png" alt="Einstein book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/Design Principles.png" alt="Design Principles book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/Steve Jobs.png" alt="Steve Jobs book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/Code2Complete.png" alt="Code Complete book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/50PhysicsIdeas.png" alt="50 Physics Ideas book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/ElonMusk.png" alt="Elon Musk book cover" /></div>
         <div>
-          <img class = "shadow"  src="./assets/reading-images/MansSearchForMeaning.png" />
+          <img class = "shadow"  src="./assets/reading-images/MansSearchForMeaning.png" alt="Man's Search for Meaning book cover" />
         </div>
-        <div><img class = "shadow"  src="./assets/reading-images/Metamorphisi.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/TheInnovators.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/sapiens.png" /></div>
-        <div><img class = "shadow"  src="./assets/reading-images/BiographyOfZero.png" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/Metamorphisi.png" alt="Metamorphosis book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/TheInnovators.png" alt="The Innovators book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/sapiens.png" alt="Sapiens book cover" /></div>
+        <div><img class = "shadow"  src="./assets/reading-images/BiographyOfZero.png" alt="Biography of Zero book cover" /></div>
       </div>
     </section>
   </body>
+  <script>
+    (function() {
+        const stored = localStorage.getItem("theme");
+        if (stored !== "light") {
+          document.documentElement.setAttribute("data-theme", "dark");
+          if (!stored) localStorage.setItem("theme", "dark");
+        }
+      })();
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        if (html.getAttribute("data-theme") === "dark") {
+          html.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+  </script>
 </html>

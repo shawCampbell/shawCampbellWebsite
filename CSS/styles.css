@@ -1,67 +1,204 @@
-/*** Header Styling ***/
+:root {
+    --bg: #fafaf8;
+    --text: #262627;
+    --text-muted: #8c8c8d;
+    --text-light: #555;
+    --border: #d8d8d3;
+    --border-light: #e4e4e0;
+    --card-bg: #ffffff;
+    --nav-active-bg: #262627;
+    --nav-link: #262627;
+    --btn-bg: #ffffff;
+    --btn-text: #6e6e6e;
+    --btn-border: #d8d8d3;
+    --btn-hover-bg: #262627;
+    --btn-hover-text: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.35);
+    --toggle-color: #262627;
+}
+
+[data-theme="dark"] {
+    --bg: #1a1a1a;
+    --text: #e0e0e0;
+    --text-muted: #999;
+    --text-light: #bbb;
+    --border: #444;
+    --border-light: #333;
+    --card-bg: #2a2a2a;
+    --nav-active-bg: #555;
+    --nav-link: #ccc;
+    --btn-bg: #333;
+    --btn-text: #ccc;
+    --btn-border: #555;
+    --btn-hover-bg: #555;
+    --btn-hover-text: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.5);
+    --toggle-color: #e0e0e0;
+}
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
-    background-color: #262627;
+    background-color: var(--nav-active-bg);
 }
 
 body {
-    background-color: #fafaf8;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Libre Baskerville", serif;
 }
 
 .nav-link{
-    color: #262627;
+    color: var(--nav-link);
 }
 
 .container {
-    border-bottom-color: #262627;
+    border-bottom-color: var(--text);
     border-bottom-width: 50px;
 }
 
-/* *** */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 4px;
+    color: var(--toggle-color);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle:hover {
+    background: none;
+    color: var(--toggle-color);
+    transform: none;
+    box-shadow: none;
+}
 
 .image-of-me{
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid var(--text);
 }
 
 .name {
     font-family: "Libre Baskerville", serif;
     padding-top: 1rem;
-    font-size: 3rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
     text-align: center;
 }
 
 .description {
     text-align: center;
     font-size: 1.2rem;
-    font-weight:350;
-    color: #8c8c8d;
+    font-weight: 350;
+    color: var(--text-muted);
 }
 
 button {
     border-radius: 10px;
-    background-color: white;
-    color:#6e6e6e
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1.5px solid var(--btn-border);
+    padding: 8px 18px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    border-color: var(--btn-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 button > * {
     margin-right: 5px;
+    vertical-align: middle;
 }
 
-
-
 .container-links {
-    display:flex;
+    display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-tiles {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 40px auto 30px;
+    flex-wrap: wrap;
+}
+
+.nav-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    transition: all 0.25s ease;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.nav-tile img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+}
+
+.nav-tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    border-radius: 18px;
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.25s ease;
+}
+
+.nav-tile span {
+    position: relative;
+    z-index: 2;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.nav-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.nav-tile:hover::after {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .container-home-art {
-    display:flex;
+    display: flex;
     justify-content: center;
     gap: 20px;
     padding-bottom: 50px;
@@ -70,55 +207,41 @@ button > * {
 .home-img > *{
     width: 200px;
     height: auto;
-    border-color: #262627;
+    border-color: var(--text);
     border-width: 20px;
 }
 
 p {
-font-size: 1.02rem;
-color: #555;
-line-height: 1.8;
-font-style: italic;
-}
-
-.name {
-        font-size: 1.9rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        margin-bottom: 0.85rem;
-        text-align: center;
-}
-
-body {
-font-family: "Libre Baskerville", serif;
-background-color: #fafaf8;
-color: #262627;
+    font-size: 1.02rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-style: italic;
 }
 
 @media (max-width: 1000px) {
     .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
         color: var(--bs-nav-pills-link-active-color);
-        background-color: #262627;
+        background-color: var(--nav-active-bg);
         font-size: 2.5rem;
     }
 
     .nav-link{
-        color: #262627;
+        color: var(--nav-link);
         font-size: 2.5rem;
     }
 
     .container {
-        border-bottom-color: #262627;
+        border-bottom-color: var(--text);
         border-bottom-width: 50px;
     }
 
     .image-of-me{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid rgb(0, 0, 0);
-        }
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid var(--text);
+    }
 
     .name {
         font-family: "Libre Baskerville", serif;
@@ -131,12 +254,12 @@ color: #262627;
         text-align: center;
         font-size: 4rem;
         font-weight: 190;
-        color: #6c6c6c;
+        color: var(--text-muted);
     }
 
     button {
-        background-color: white;
-        color:#6e6e6e;
+        background-color: var(--btn-bg);
+        color: var(--btn-text);
         font-size: 50px;
     }
 
@@ -146,13 +269,14 @@ color: #262627;
     }
 
     .container-links {
-        display:flex;
+        display: flex;
         justify-content: center;
         gap: 20px;
+        flex-wrap: wrap;
     }
 
     .container-home-art {
-        display:flex;
+        display: flex;
         justify-content: center;
         gap: 20px;
         padding-bottom: 50px;
@@ -161,9 +285,36 @@ color: #262627;
     .home-img > *{
         width: 400px;
         height: auto;
-        border-color: #262627;
+        border-color: var(--text);
         border-width: 20px;
         border-radius: 50px !important;
     }
 }
 
+.theme-toggle-nav {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15rem;
+    padding: 0 6px;
+    color: var(--nav-link);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.theme-toggle-nav::before {
+    content: "🌙";
+}
+
+[data-theme="dark"] .theme-toggle-nav::before {
+    content: "☀";
+}
+
+.theme-toggle-nav:hover {
+    background: none;
+    color: var(--nav-link);
+    transform: none;
+    box-shadow: none;
+}

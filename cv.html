@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shaw Campbell — CV</title>
+    <title>Shaw Campbell - CV</title>
+    <meta name="description" content="Curriculum vitae for Shaw Campbell, graduate software developer with BSc Eng (Hons) in Electrical & Computer Engineering from UCT." />
+    <meta name="author" content="Shaw Campbell" />
     <link
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -23,7 +25,17 @@
         --accent: #1a5ca8;
         --accent-soft: #edf3fb;
         --page-bg: #ffffff;
+        --body-bg: #dde0e5;
         --section-gap: 20px;
+      }
+
+      [data-theme="dark"] {
+        --ink: #e0e0e0;
+        --muted: #999;
+        --accent: #6ab0f0;
+        --accent-soft: #1a2a3a;
+        --page-bg: #1e1e1e;
+        --body-bg: #111;
       }
 
       body {
@@ -31,7 +43,7 @@
         font-size: 13.5px;
         line-height: 1.65;
         color: var(--ink);
-        background: #dde0e5;
+        background: var(--body-bg);
         padding: 40px 10px;
       }
 
@@ -43,15 +55,14 @@
         box-shadow: 0 6px 40px rgba(0, 0, 0, 0.13);
       }
 
-      /* ── Header ── */
       .cv-header {
         margin-bottom: 10px;
       }
 
-        .tech-row .pipe {
-    color: var(--muted);
-    margin: 0 2px;
-  }
+      .tech-row .pipe {
+        color: var(--muted);
+        margin: 0 2px;
+      }
 
       .cv-name {
         font-family: "EB Garamond", serif;
@@ -68,13 +79,16 @@
         color: var(--accent);
         margin-bottom: 16px;
       }
+
       .cv-links a {
         color: var(--accent);
         text-decoration: none;
       }
+
       .cv-links a:hover {
         text-decoration: underline;
       }
+
       .cv-links .sep {
         color: #ccc;
         margin: 0 2px;
@@ -91,7 +105,6 @@
         margin-bottom: 10px;
       }
 
-      /* ── Section ── */
       .section {
         margin-bottom: var(--section-gap);
       }
@@ -107,7 +120,6 @@
         margin-bottom: 18px;
       }
 
-      /* ── Sub-section title (Awards / Activities within Education) ── */
       .subsection-title {
         font-size: 10px;
         font-weight: 600;
@@ -117,13 +129,13 @@
         margin: 16px 0 10px 0;
       }
 
-      /* ── Entry with icon ── */
       .entry {
         display: grid;
         grid-template-columns: 36px 1fr;
         gap: 0 10px;
         margin-bottom: 10px;
       }
+
       .entry:last-child {
         margin-bottom: 0;
       }
@@ -164,12 +176,40 @@
         padding-left: 20px;
       }
 
-      /* ── UCT spine group ── */
+      .company-logo {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        border-radius: 4px;
+      }
+
+      .entry-icon-wrap {
+        padding-top: 2px;
+      }
+
+      .section-mt {
+        margin-top: 20px;
+      }
+
+      .icon-uct {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pipe-bold {
+        font-weight: 900;
+      }
+
       .uct-group {
         display: flex;
         gap: 7px;
         margin-bottom: 2px;
       }
+
       .uct-spine {
         display: flex;
         flex-direction: column;
@@ -177,55 +217,27 @@
         flex-shrink: 0;
         width: 36px;
       }
+
       .uct-spine .spine-line {
         width: 2px;
         background: var(--accent);
         flex: 1;
         margin-top: 1px;
       }
+
       .uct-body {
         flex: 1;
         padding-top: 1px;
       }
+
       .uct-role {
         margin-bottom: 1px;
       }
+
       .uct-role:last-child {
         margin-bottom: 0;
       }
 
-      /* ── Education bullets ── */
-      .edu-bullets {
-        list-style: disc;
-        padding-left: 30px;
-        margin-top: 5px;
-      }
-      .edu-bullets li {
-        font-size: 13px;
-        line-height: 1.7;
-        margin-bottom: 2px;
-        color: #333;
-      }
-      .edu-bullets li em {
-        font-style: italic;
-        font-family: "EB Garamond", serif;
-        font-size: 14.5px;
-      }
-      .badge {
-        display: inline-block;
-        background: var(--accent-soft);
-        color: var(--accent);
-        font-size: 10.5px;
-        font-weight: 600;
-        padding: 1px 7px;
-        border-radius: 20px;
-        margin-left: 5px;
-        vertical-align: middle;
-        letter-spacing: 0.3px;
-        font-family: "DM Sans", sans-serif;
-      }
-
-      /* ── Projects ── */
       .project-card {
         border: 1px solid #dce8f5;
         border-radius: 6px;
@@ -233,6 +245,7 @@
         margin-bottom: 5px;
         background: #f8fbff;
       }
+
       .project-card:last-child {
         margin-bottom: 0;
       }
@@ -272,6 +285,7 @@
         gap: 4px;
         flex-shrink: 0;
       }
+
       .project-link:hover {
         text-decoration: underline;
       }
@@ -289,42 +303,193 @@
         margin-top: 6px;
       }
 
-      /* ── Extra-curricular dashes ── */
-      .dash-list {
+      /* ── Education ── */
+      .edu-header {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 0 14px;
+        margin-bottom: 16px;
+      }
+
+      .edu-degree {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .edu-meta {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      .edu-details {
+        margin-left: 50px;
+      }
+
+      .edu-subsection-title {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 14px 0 8px 0;
+      }
+
+      .edu-awards-list {
         list-style: none;
-        padding-left: 0;
-        margin-top: 4px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
       }
-      .dash-list li {
+
+      .edu-awards-list li {
         font-size: 13px;
-        line-height: 1.7;
-        padding-left: 16px;
-        position: relative;
+        line-height: 1.6;
         color: #333;
+        padding-left: 18px;
+        position: relative;
       }
-      .dash-list li::before {
-        content: "–";
+
+      .edu-awards-list li::before {
+        content: "";
         position: absolute;
         left: 0;
+        top: 7px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .edu-awards-list li strong {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .edu-awards-list li .badge {
+        display: inline-block;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 10.5px;
+        font-weight: 600;
+        padding: 1px 7px;
+        border-radius: 20px;
+        margin-left: 5px;
+        vertical-align: middle;
+        letter-spacing: 0.3px;
+      }
+
+      .edu-awards-list li .award-date {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      /* ── Extra-curriculars ── */
+      .ec-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .ec-item {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .ec-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+        margin-top: 6px;
+        flex-shrink: 0;
+      }
+
+      .ec-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .ec-date {
+        font-size: 11.5px;
+        color: var(--muted);
+        margin-bottom: 2px;
+      }
+
+      .ec-desc {
+        font-size: 12.5px;
+        color: #444;
+        line-height: 1.6;
+      }
+
+      [data-theme="dark"] body {
+        background: #111;
+        color: var(--ink);
+      }
+
+      [data-theme="dark"] .page {
+        background: var(--page-bg);
+      }
+
+      [data-theme="dark"] .profile-summary {
+        background: var(--accent-soft);
+        color: #ccc;
+      }
+
+      [data-theme="dark"] .project-card {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+
+      [data-theme="dark"] .project-link {
+        color: var(--accent);
+      }
+
+      [data-theme="dark"] .project-skills {
+        color: var(--accent);
+      }
+
+      [data-theme="dark"] .entry-skills {
+        color: var(--accent);
+      }
+
+      [data-theme="dark"] .entry-ref {
+        color: #c77dc7;
+      }
+
+      [data-theme="dark"] .badge {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      [data-theme="dark"] .award-item {
+        background: var(--accent-soft);
+      }
+
+      [data-theme="dark"] .entry-desc,
+      [data-theme="dark"] .project-desc,
+      [data-theme="dark"] .ec-desc {
+        color: #ccc;
+      }
+
+      [data-theme="dark"] .award-text {
+        color: var(--ink);
+      }
+
+      [data-theme="dark"] .award-text span {
         color: var(--muted);
       }
 
-      /* ── Extra-curricular block within Education ── */
-      .extracurric-block {
-        margin-bottom: 12px;
-      }
-      .extracurric-block:last-child {
-        margin-bottom: 0;
+      [data-theme="dark"] .project-tag {
+        border-color: #3a6a9a;
       }
 
-      /* ── icon helper ── */
-      .icon-uct {
-        width: 32px;
-        height: 32px;
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      [data-theme="dark"] .edu-awards-list li {
+        color: #ccc;
       }
 
       @media print {
@@ -347,694 +512,428 @@
           break-inside: avoid;
         }
       }
-
-      @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap");
-      .cv-wrap {
-        font-family: "DM Sans", sans-serif;
-        font-size: 13.5px;
-        line-height: 1.65;
-        color: #1a1a1a;
-        background: #fff;
-        padding: 0px 0px;
-        /* max-width: 720px; */
-        margin: 0 auto;
-      }
-      .section-title {
-        font-size: 10.5px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #1a1a1a;
-        padding-bottom: 6px;
-        border-bottom: 1.5px solid #1a1a1a;
-        margin-bottom: 18px;
-      }
-      .edu-header {
-        display: grid;
-        grid-template-columns: 36px 1fr;
-        gap: 0 14px;
-        margin-bottom: 16px;
-      }
-      .edu-degree {
-        font-size: 13.5px;
-        font-weight: 600;
-        color: #1a1a1a;
-      }
-      .edu-meta {
-        font-size: 12px;
-        color: #5a5a5a;
-        margin-top: 2px;
-      }
-      /* Awards row */
-      .awards-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        margin-bottom: 18px;
-        margin-left: 20px;
-      }
-      .award-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 9px;
-        background: #edf3fb;
-        border-radius: 6px;
-        padding: 9px 11px;
-      }
-      .award-icon {
-        width: 22px;
-        height: 22px;
-        background: #1a5ca8;
+    </style>
+    <style>
+      .cv-theme-toggle {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 9999;
+        background: var(--page-bg);
+        border: 1px solid var(--muted);
         border-radius: 50%;
+        width: 36px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-shrink: 0;
-        margin-top: 1px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: var(--ink);
+        transition: background 0.2s ease;
       }
-      .award-icon svg {
-        display: block;
+      .cv-theme-toggle:hover {
+        background: var(--accent-soft);
       }
-      .award-text {
-        font-size: 12.5px;
-        color: #1a1a1a;
-        line-height: 1.5;
+      .cv-theme-toggle::before {
+        content: "🌙";
       }
-      .award-text strong {
-        font-weight: 600;
-        display: block;
-        font-size: 12.5px;
-      }
-      .award-text span {
-        color: #5a5a5a;
-        font-size: 11.5px;
-      }
-      /* Extra-curriculars */
-      .ec-label {
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        color: #5a5a5a;
-        margin: 0 0 10px 20px;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-      .ec-label::after {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background: #e0e0e0;
-      }
-      .ec-list {
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-      }
-      .ec-item {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-      }
-      .ec-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #1a5ca8;
-        margin-top: 6px;
-        flex-shrink: 0;
-      }
-      .ec-body {
-      }
-      .ec-title {
-        font-size: 13px;
-        font-weight: 600;
-        color: #1a1a1a;
-      }
-      .ec-date {
-        font-size: 11.5px;
-        color: #5a5a5a;
-        margin-bottom: 2px;
-      }
-      .ec-desc {
-        font-size: 12.5px;
-        color: #444;
-        line-height: 1.6;
+      [data-theme="dark"] .cv-theme-toggle::before {
+        content: "☀";
       }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shaw Campbell",
+      "givenName": "Shaw",
+      "familyName": "Campbell",
+      "email": "campbellshaw8@gmail.com",
+      "telephone": "+27797336179",
+      "url": "http://shawcampbell.github.io/shawCampbellWebsite",
+      "sameAs": [
+        "https://www.linkedin.com/in/shaw-campbell-5b960b209/",
+        "https://github.com/shawCampbell"
+      ],
+      "description": "Graduate software developer with a BSc Eng (Hons) in Electrical & Computer Engineering from UCT. Experienced software developer with machine learning research experience and a good academic track record.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Bachelor's Degree with Honours",
+          "name": "BSc Eng (Hons) - Electrical & Computer Engineering",
+          "educationalLevel": "Honours",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Cape Town"
+          },
+          "dateCreated": "2025"
+        }
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Cape Town"
+      },
+      "knowsAbout": [
+        "Python", "Java", "C++", "C", "C#", ".NET", "ASP.NET", "Angular",
+        "PyTorch", "Machine Learning", "Medical Image Analysis",
+        "Embedded Systems", "Linux", "MS SQL Server", "Agile Development"
+      ],
+      "workLocation": {
+        "@type": "City",
+        "name": "Cape Town"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "South Africa"
+      }
+    }
+    </script>
   </head>
   <body>
-    <div class="page">
+    <div class="page" itemscope itemtype="https://schema.org/Person" role="document" aria-label="Curriculum vitae for Shaw Campbell">
+
       <!-- ══ HEADER ══ -->
       <header class="cv-header">
-        <h1 class="cv-name">SHAW CAMPBELL</h1>
+        <h1 class="cv-name" itemprop="name">SHAW CAMPBELL</h1>
         <div class="cv-links">
-          <a href="http://shawcampbell.github.io/shawCampbellWebsite"
-            >Website</a
-          >
-          <span class="sep">|</span>
-          <a href="mailto:campbellshaw8@gmail.com">campbellshaw8@gmail.com</a>
-          <span class="sep">|</span>
-          <a href="https://www.linkedin.com/in/shaw-campbell-5b960b209/"
-            >LinkedIn</a
-          >
-          <span class="sep">|</span>
-          <a href="https://github.com/shawCampbell">GitHub</a>
-          <span class="sep">|</span>
-          <span class="cv-links">Cell: 0797336179</span>
+          <a href="http://shawcampbell.github.io/shawCampbellWebsite" itemprop="url" aria-label="Personal website" style="font-weight: 700; text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 3px;">Website ↗</a>
+          <span class="sep" role="separator" aria-hidden="true">|</span>
+          <a href="mailto:campbellshaw8@gmail.com" itemprop="email" aria-label="Email campbellshaw8@gmail.com">campbellshaw8@gmail.com</a>
+          <span class="sep" role="separator" aria-hidden="true">|</span>
+          <a href="https://www.linkedin.com/in/shaw-campbell-5b960b209/" itemprop="sameAs" aria-label="LinkedIn profile">LinkedIn</a>
+          <span class="sep" role="separator" aria-hidden="true">|</span>
+          <a href="https://github.com/shawCampbell" itemprop="sameAs" aria-label="GitHub profile">GitHub</a>
+          <span class="sep" role="separator" aria-hidden="true">|</span>
+          <a href="tel:+27797336179" class="cv-links" itemprop="telephone" aria-label="Phone number">Cell: 0797336179</a>
         </div>
 
-        <div class="profile-summary">
-          Graduate software developer with a BSc Eng (Hons) in Electrical &amp;
-          Computer Engineering from UCT. Experienced software developer with
-          machine learning research experience and a good academic track record.
+        <div class="profile-summary" itemprop="description" aria-label="Professional summary">
+          Graduate software developer with a BSc Eng (Hons) in Electrical &amp; Computer Engineering from UCT. Experienced software developer with machine learning research experience and a good academic track record.
         </div>
       </header>
 
       <!-- ══ WORK EXPERIENCE ══ -->
-      <section class="section">
-        <div class="section-title">Work Experience</div>
+      <section class="section" aria-label="Work experience">
+        <div class="section-title" role="heading" aria-level="2">Work Experience</div>
 
         <!-- PSG -->
-        <div class="entry">
-          <div style="padding-top: 2px">
+        <div class="entry" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization" role="group" aria-label="PSG Financial Services role">
+          <div class="entry-icon-wrap">
             <img
               src="./assets/career-images-cv/PSG_Logo.png"
-              style="
-                width: 32px;
-                height: 32px;
-                object-fit: contain;
-                border-radius: 4px;
-              "
+              alt="PSG Financial Services logo"
+              class="company-logo"
             />
           </div>
           <div>
-            <div class="entry-title">
-              Graduate Software Developer — PSG Financial Services
+            <div class="entry-title" itemprop="name">Graduate Software Developer - PSG Financial Services</div>
+            <div class="entry-date">
+              <time datetime="2026">2026</time> – <time datetime="2026">Present</time>
             </div>
-            <div class="entry-date">2026 – Present</div>
-            <div class="entry-desc">
-              Building and maintaining production web applications, working
-              across a .NET / Angular stack. Write end-to-end tests using
-              Playwright in C#.
+            <div class="entry-desc" itemprop="description">
+              Building and maintaining production web applications, working across a .NET / Angular stack. Write end-to-end tests using Playwright in C#. Migrated legacy automated tests to Playwright using agentic system.
             </div>
             <div class="entry-skills">
-              Skills: C# · .NET · ASP.NET · Angular (Typescript, CSS) · Agile · Web
-              Development · MS SQL Server
+              Skills: C# · .NET · ASP.NET · Angular (Typescript, CSS) · Agile · Web Development · MS SQL Server · OpenCode · Playwright
             </div>
-            
           </div>
         </div>
 
         <!-- Peralex -->
-        <div class="entry">
-          <div style="padding-top: 2px">
+        <div class="entry" role="group" aria-label="Peralex Electronics role">
+          <div class="entry-icon-wrap">
             <img
               src="./assets/career-images-cv/Peralex_Logo.jpg"
-              style="
-                width: 32px;
-                height: 32px;
-                object-fit: contain;
-                border-radius: 4px;
-              "
+              alt="Peralex Electronics logo"
+              class="company-logo"
             />
           </div>
           <div>
-            <div class="entry-title">
-              Software Engineering Vacation Work — Peralex Electronics
-            </div>
-            <div class="entry-date">2025 · 5 weeks</div>
+            <div class="entry-title">Software Engineering Vacation Work - Peralex Electronics</div>
+            <div class="entry-date"><time datetime="2025">2025</time> · 5 weeks</div>
             <div class="entry-desc">
-              Designed and built a Python desktop application for visualising
-              and navigating openEMS electromagnetic simulation results across
-              multiple antenna types. Participated in the full Agile workflow —
-              sprint planning, stand-ups, and peer code reviews.
+              Designed and built a Python desktop application for visualising and navigating openEMS electromagnetic simulation results across multiple antenna types. Participated in the full Agile workflow - sprint planning, stand-ups, and peer code reviews.
             </div>
             <div class="entry-skills">
               Skills: Python · OOP · Desktop App Development · Agile · Electromagnetics
             </div>
             <div class="entry-ref">
-              Reference: Skippy Burger, <span><a href='skippy@peralex.com'>skippy@peralex.com</a></span>,
-              <span><a href='https://shawcampbell.github.io/shawCampbellWebsite/references/peralex-ref.pdf'>reference letter</a></span>
+              Reference: Skippy Burger, <a href="mailto:skippy@peralex.com">skippy@peralex.com</a>,
+              <a href="https://shawcampbell.github.io/shawCampbellWebsite/references/peralex-ref.pdf">reference letter</a>
             </div>
           </div>
         </div>
 
         <!-- Electrum -->
-        <div class="entry">
-          <div style="padding-top: 2px">
+        <div class="entry" role="group" aria-label="Electrum Payments internship">
+          <div class="entry-icon-wrap">
             <img
               src="./assets/career-images-cv/Electrum_Logo.png"
-              style="
-                width: 32px;
-                height: 32px;
-                object-fit: contain;
-                border-radius: 4px;
-              "
+              alt="Electrum Payments logo"
+              class="company-logo"
             />
           </div>
           <div>
-            <div class="entry-title">
-              Software Development Intern — Electrum Payments
-            </div>
-            <div class="entry-date">2024 · 4 weeks</div>
+            <div class="entry-title">Software Development Intern - Electrum Payments</div>
+            <div class="entry-date"><time datetime="2024">2024</time> · 4 weeks</div>
             <div class="entry-desc">
-              Delivered a real feature on a live company codebase, embedded
-              within the engineering team across stand-ups, planning sessions,
-              and code reviews. Received a full-time offer at the conclusion of
-              the internship.
+              Delivered a real feature on a live company codebase, embedded within the engineering team across stand-ups, planning sessions, and code reviews. Received a full-time offer at the conclusion of the internship.
             </div>
             <div class="entry-skills">
               Java · Spring Boot · OOP · REST APIs · Agile
             </div>
             <div class="entry-ref">
-              Reference: Johan Du Toit, <span><a href='johandtmusicscore@gmail.com'>Johan Du Toit</a></span>,
-              <span><a href='https://shawcampbell.github.io/shawCampbellWebsite/references/electrum.pdf'>reference letter</a></span>
+              Reference: Johan Du Toit, <a href="mailto:johandtmusicscore@gmail.com">Johan Du Toit</a>,
+              <a href="https://shawcampbell.github.io/shawCampbellWebsite/references/electrum.pdf">reference letter</a>
             </div>
           </div>
         </div>
 
         <!-- UCT grouped roles -->
-        <div class="uct-group">
+        <div class="uct-group" role="group" aria-label="University of Cape Town roles">
           <div class="uct-spine">
             <div class="icon-uct">
               <img
                 src="./assets/career-images-cv/UCT_Logo.png"
-                style="
-                  width: 32px;
-                  height: 32px;
-                  object-fit: contain;
-                  border-radius: 4px;
-                "
+                alt="University of Cape Town logo"
+                class="company-logo"
               />
             </div>
             <div class="spine-line"></div>
           </div>
-          <div class="uct-body">
+          <div class="uct-body" itemscope itemtype="https://schema.org/Organization" itemprop="worksFor">
+            <meta itemprop="name" content="University of Cape Town" />
             <div class="uct-role">
-              <div class="entry-title">
-                Electrical Engineering Tutor — Signals and Systems II (EEE3092F)
-              </div>
-              <div class="entry-date">Jan – Jul 2025 · 4 months</div>
+              <div class="entry-title">Electrical Engineering Tutor - Signals and Systems II (EEE3092F)</div>
+              <div class="entry-date"><time datetime="2025-01">Jan</time> – <time datetime="2025-07">Jul 2025</time> · 4 months</div>
             </div>
             <div class="uct-role">
-              <div class="entry-title">
-                Electrical Engineering Tutor — Signals and Systems I (EEE2047F)
-              </div>
-              <div class="entry-date">Aug – Nov 2025 · 4 months</div>
+              <div class="entry-title">Electrical Engineering Tutor - Signals and Systems I (EEE2047F)</div>
+              <div class="entry-date"><time datetime="2025-08">Aug</time> – <time datetime="2025-11">Nov 2025</time> · 4 months</div>
             </div>
             <div class="uct-role">
-              <div class="entry-title">
-                Control Systems Laboratory Assistant
-              </div>
-              <div class="entry-date">2023 &amp; 2024 · 6 weeks per year</div>
+              <div class="entry-title">Control Systems Laboratory Assistant</div>
+              <div class="entry-date"><time datetime="2023">2023</time> &amp; <time datetime="2024">2024</time> · 6 weeks per year</div>
             </div>
             <div class="uct-role">
-              <div class="entry-title">
-                Computer Science Tutor — Python (CSC1015F)
-              </div>
-              <div class="entry-date">2023 · 6 months</div>
+              <div class="entry-title">Computer Science Tutor - Python (CSC1015F)</div>
+              <div class="entry-date"><time datetime="2023">2023</time> · 6 months</div>
             </div>
             <div class="uct-role">
-              <div class="entry-title">
-                Computer Science Tutor — Java (CSC1016S)
-              </div>
-              <div class="entry-date">2023 · 6 months</div>
+              <div class="entry-title">Computer Science Tutor - Java (CSC1016S)</div>
+              <div class="entry-date"><time datetime="2023">2023</time> · 6 months</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ══ PROJECTS ══ -->
-      <section class="section">
-        <div class="section-title">Selected Projects</div>
+      <section class="section" aria-label="Selected projects">
+        <div class="section-title" role="heading" aria-level="2">Selected Projects</div>
 
-        <div class="project-card" >
+        <div class="project-card" role="group" aria-label="Thesis project: Deep Learning Deformable Registration">
           <div class="project-header">
-            <span class="project-title"
-              >Deep Learning Deformable Registration of Ultrasound to MRI for
-              Prostate Imaging</span
-            >
-            <span class="project-tag">Thesis · 2025</span>
+            <span class="project-title">Deep Learning Deformable Registration of Ultrasound to MRI for Prostate Imaging</span>
+            <span class="project-tag">Thesis · <time datetime="2025">2025</time></span>
             <a
               class="project-link"
               href="https://github.com/shawCampbell/Deep-Learning-Based-Deformable-Registration-of-Transrectal-Ultrasound-to-MRI-for-Prostate-Imaging"
               target="_blank"
+              aria-label="View thesis project on GitHub"
             >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                />
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
               </svg>
               GitHub
             </a>
           </div>
           <div class="project-desc">
-            Final-year honours thesis investigating weakly supervised deep
-            learning for deformable registration of transrectal ultrasound
-            (TRUS) and MRI in prostate imaging. Utilised UCT high performance computing
-            cluster, which is run on linux.
+            Final-year honours thesis investigating weakly supervised deep learning for deformable registration of transrectal ultrasound (TRUS) and MRI in prostate imaging. Utilised UCT high performance computing cluster, which is run on linux.
           </div>
           <div class="project-skills">
-            Python · PyTorch · VoxelMorph · ANTs · Jupyter Notebooks · Medical
-            Image Analysis · Linux
+            Python · PyTorch · VoxelMorph · ANTs · Jupyter Notebooks · Medical Image Analysis · Linux
           </div>
         </div>
 
-        
-
-        <div class="project-card" style="margin-top: 0px;" >
+        <div class="project-card" role="group" aria-label="Micro-Mouse embedded systems project">
           <div class="project-header">
-            <span class="project-title"
-              >Micro-Mouse — Sensing &amp; Power Subsystems</span
-            >
-            <span class="project-tag">Embedded · 2024</span>
+            <span class="project-title">Micro-Mouse - Sensing &amp; Power Subsystems</span>
+            <span class="project-tag">Embedded · <time datetime="2024">2024</time></span>
             <a
               class="project-link"
               href="https://github.com/shawCampbell/Micro-mouse-"
               target="_blank"
+              aria-label="View Micro-Mouse project on GitHub"
             >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                />
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
               </svg>
               GitHub
             </a>
           </div>
           <div class="project-desc">
-            Designed and implemented the infrared sensor subsystem and power
-            subsystem for an autonomous maze-solving micro-mouse, interfacing
-            with an existing motherboard and dual-motor drive.
+            Designed and implemented the infrared sensor subsystem and power subsystem for an autonomous maze-solving micro-mouse, interfacing with an existing motherboard and dual-motor drive.
           </div>
           <div class="project-skills">
             C · STM32L476 · KiCad · Embedded Systems · PCB Design · Electronics
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" role="group" aria-label="TaskFlow C++ project">
           <div class="project-header">
-            <span class="project-title"
-              >TaskFlow — CPU-Inspired Task Scheduler</span
-            >
-            <span class="project-tag">C++ · 2025</span>
+            <span class="project-title">TaskFlow - CPU-Inspired Task Scheduler</span>
+            <span class="project-tag">C++ · <time datetime="2025">2025</time></span>
             <a
               class="project-link"
               href="https://github.com/shawCampbell/TaskFlow"
               target="_blank"
+              aria-label="View TaskFlow project on GitHub"
             >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                />
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
               </svg>
               GitHub
             </a>
           </div>
           <div class="project-desc">
-            A back-end C++ task scheduler that adapts classical CPU scheduling
-            algorithms for human productivity planning.
+            A back-end C++ task scheduler that adapts classical CPU scheduling algorithms for human productivity planning.
           </div>
           <div class="project-skills">
             C++ · OOP · Design Patterns · Scheduling Algorithms · CMake
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" role="group" aria-label="Self studying stochastic calculus">
           <div class="project-header">
             <span class="project-title">Self Studying Stochastic Calculus</span>
-            <span class="project-tag">Stochastic Calculus · 2026</span>
+            <span class="project-tag">Stochastic Calculus · <time datetime="2026">2026</time></span>
           </div>
           <div class="project-desc">
-            Out of love for the rigorous and abstract theory, I have been self
-            studying real analysis and stochastic calculus using textbooks from
-            UCT's masters of financial engineering programme. Progress,
-            handwritten exercise solutions, and a dated study log are available
-            on my
-            <a
-              href="https://shawcampbell.github.io/shawCampbellWebsite/mathematics.html"
-              style="color: var(--accent)"
-              >website</a
-            >.
+            Out of love for the rigorous and abstract theory, I have been self studying real analysis and stochastic calculus using textbooks from UCT's masters of financial engineering programme. Progress, handwritten exercise solutions, and a dated study log are available on my
+            <a href="https://shawcampbell.github.io/shawCampbellWebsite/mathematics.html">website</a>.
           </div>
         </div>
       </section>
 
-      
-      <!-- <section class="section">
-        <div class="section-title">Education</div>
-        <div class="entry">
-          <div style="padding-top: 2px">
-            <div class="icon-uct">
-              <img
-                src="./career-images/UCT_Logo.png"
-                style="width: 32px; height: 32px; object-fit: contain; border-radius: 4px;"
-              />
-            </div>
-          </div>
-          <div>
-            <div class="entry-title">BSc Eng (Hons) — Electrical &amp; Computer Engineering</div>
-            <div style="font-size: 12px; color: var(--muted); margin-top: 1px; margin-bottom: 10px;">
-              University of Cape Town &nbsp;·&nbsp; 2021 – 2025
-            </div> -->
-
-      <!-- Awards -->
-      <!-- <div class="subsection-title">Awards &amp; Achievements</div>
-            <ul class="edu-bullets">
-              <li>
-                Graduated with Honours (GPA &gt; 70%), thesis in medical machine learning
-                <span class="badge">Honours</span>
-              </li>
-              <li>
-                <em>Dean's Merit List</em> — 2022 &amp; 2023
-                <span class="badge">×2</span>
-              </li>
-              <li>
-                PSG Full Merit Bursary — 2024 &amp; 2025
-                <span class="badge">Merit</span>
-              </li>
-              <li>
-                UCT Plus Gold Award — 60 hours of voluntary community service (2023)
-              </li>
-            </ul> -->
-
-      <!-- Extra-curriculars -->
-      <!-- <div class="subsection-title" style="margin-top: 14px;">Extra-Curriculars</div>
-
-            <div class="extracurric-block">
-              <div class="entry-title">Student Residence Mentor</div>
-              <div class="entry-date">Jan 2022 – Nov 2023 &nbsp;&amp;&nbsp; Jan 2024 – Nov 2024</div>
-              <ul class="dash-list" style="margin-top: 3px;">
-                <li>Supported first-year students through the academic and social transition into university life across two separate years.</li>
-              </ul>
-            </div>
-
-            <div class="extracurric-block">
-              <div class="entry-title">IT &amp; Maintenance Representative — Leo Marquard Hall House Committee</div>
-              <div class="entry-date">Jan 2023 – Nov 2023</div>
-              <ul class="dash-list" style="margin-top: 3px;">
-                <li>Built and maintained a website for the campus residence.</li>
-                <li>Provided IT support across the residence community.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <div class="cv-wrap">
-        <div class="section-title">Education</div>
+      <!-- ══ EDUCATION ══ -->
+      <section class="section" aria-label="Education" itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
+        <div class="section-title" role="heading" aria-level="2">Education</div>
+        <meta itemprop="name" content="University of Cape Town" />
 
         <div class="edu-header">
-          <div style="padding-top: 2px">
-            <div
-              style="
-                width: 32px;
-                height: 32px;
-                background: #edf3fb;
-                border-radius: 6px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              "
-            >
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <path d="M10 3L18 7L10 11L2 7Z" fill="#1a5ca8" />
-                <path
-                  d="M6 9.5L6 14Q10 16.5 14 14L14 9.5"
-                  stroke="#1a5ca8"
-                  stroke-width="1.5"
-                  fill="none"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+          <div class="entry-icon-wrap">
+            <img
+              src="./assets/career-images-cv/UCT_Logo.png"
+              alt="University of Cape Town logo"
+              class="company-logo"
+            />
           </div>
-          <div>
-            <div class="edu-degree">
-              BSc Eng (Hons) — Electrical &amp; Computer Engineering
-            </div>
+          <div itemscope itemtype="https://schema.org/EducationalOccupationalCredential" itemprop="hasCredential">
+            <div class="edu-degree" itemprop="name">BSc Eng (Hons) - Electrical &amp; Computer Engineering</div>
             <div class="edu-meta">
-              University of Cape Town &nbsp;·&nbsp; 2021 – 2025
+              <span itemprop="educationalLevel">Honours</span> &nbsp;·&nbsp; <time datetime="2021">2021</time> – <time datetime="2025">2025</time>
             </div>
+            <meta itemprop="credentialCategory" content="Bachelor's Degree with Honours" />
+            <meta itemprop="recognizedBy" content="University of Cape Town" />
           </div>
         </div>
 
-        <!-- Awards grid -->
-        <div class="awards-grid">
-          <div class="award-item">
-            <div class="award-icon">
-              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-                <path
-                  d="M7 1l1.5 3.2L12 4.8l-2.5 2.4.6 3.4L7 9l-3.1 1.6.6-3.4L2 4.8l3.5-.6L7 1z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div class="award-text">
-              <strong>Honours Graduate</strong>
-              <span>GPA = 71% · Thesis in medical ML</span>
-            </div>
-          </div>
-          <div class="award-item">
-            <div class="award-icon">
-              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-                <path
-                  d="M7 1l1.5 3.2L12 4.8l-2.5 2.4.6 3.4L7 9l-3.1 1.6.6-3.4L2 4.8l3.5-.6L7 1z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div class="award-text">
-              <strong>Dean's Merit List ×2</strong>
-              <span>2022 &amp; 2023</span>
-            </div>
-          </div>
-          <div class="award-item">
-            <div class="award-icon">
-              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-                <rect
-                  x="3"
-                  y="7"
-                  width="8"
-                  height="5"
-                  rx="1"
-                  stroke="white"
-                  stroke-width="1.3"
-                  fill="none"
-                />
-                <path
-                  d="M5 7V5a2 2 0 014 0v2"
-                  stroke="white"
-                  stroke-width="1.3"
-                  fill="none"
-                />
-              </svg>
-            </div>
-            <div class="award-text">
+        <div class="edu-details">
+          <!-- Awards -->
+          <div class="edu-subsection-title" role="heading" aria-level="3">Awards &amp; Achievements</div>
+          <ul class="edu-awards-list">
+            <li>
+              <strong>Honours Graduate</strong> - GPA = 71%, thesis in medical ML
+              <span class="badge">Honours</span>
+            </li>
+            <li>
+              <strong>Dean's Merit List</strong>
+              <span class="award-date"><time datetime="2022">2022</time> &amp; <time datetime="2023">2023</time></span>
+              <span class="badge">×2</span>
+            </li>
+            <li>
               <strong>PSG Full Merit Bursary</strong>
-              <span>2024 &amp; 2025</span>
-            </div>
-          </div>
-          <div class="award-item">
-            <div class="award-icon">
-              <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-                <circle
-                  cx="7"
-                  cy="7"
-                  r="5"
-                  stroke="white"
-                  stroke-width="1.3"
-                  fill="none"
-                />
-                <path
-                  d="M5 7l1.5 1.5L9.5 5"
-                  stroke="white"
-                  stroke-width="1.3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-            <div class="award-text">
-              <strong>UCT Plus Gold Award</strong>
-              <span>60 hrs community service · 2023</span>
-            </div>
-          </div>
-        </div>
+              <span class="award-date"><time datetime="2024">2024</time> &amp; <time datetime="2025">2025</time></span>
+              <span class="badge">Merit</span>
+            </li>
+            <li>
+              <strong>UCT Plus Gold Award</strong> - 60 hours of voluntary community service
+              <span class="award-date"><time datetime="2023">2023</time></span>
+            </li>
+          </ul>
 
-        <!-- Extra-curriculars -->
-        <div class="ec-label">Extra-Curriculars</div>
-        <div class="ec-list">
-          <div class="ec-item">
-            <div class="ec-dot"></div>
-            <div class="ec-body">
-              <div class="ec-title">Student Residence Mentor</div>
-              <div class="ec-date">
-                Jan 2022 – Nov 2023 &amp; Jan 2024 – Nov 2024
-              </div>
-              <div class="ec-desc">
-                Supported first-year students through the academic and social
-                transition into university life across two separate years.
+          <!-- Extra-curriculars -->
+          <div class="edu-subsection-title" role="heading" aria-level="3">Extra-Curriculars</div>
+          <div class="ec-list">
+            <div class="ec-item">
+              <div class="ec-dot" aria-hidden="true"></div>
+              <div class="ec-body">
+                <div class="ec-title">Student Residence Mentor</div>
+                <div class="ec-date">
+                  <time datetime="2022-01">Jan 2022</time> – <time datetime="2023-11">Nov 2023</time>
+                  &amp;
+                  <time datetime="2024-01">Jan 2024</time> – <time datetime="2024-11">Nov 2024</time>
+                </div>
+                <div class="ec-desc">
+                  Supported first-year students through the academic and social transition into university life across two separate years.
+                </div>
               </div>
             </div>
-          </div>
-          <div class="ec-item">
-            <div class="ec-dot"></div>
-            <div class="ec-body">
-              <div class="ec-title">
-                IT &amp; Maintenance Representative — Leo Marquard Hall House
-                Committee
-              </div>
-              <div class="ec-date">Jan 2023 – Nov 2023</div>
-              <div class="ec-desc">
-                Built and maintained a website for the campus residence.
-                Provided IT support across the residence community.
+            <div class="ec-item">
+              <div class="ec-dot" aria-hidden="true"></div>
+              <div class="ec-body">
+                <div class="ec-title">IT &amp; Maintenance Representative - Leo Marquard Hall House Committee</div>
+                <div class="ec-date"><time datetime="2023-01">Jan 2023</time> – <time datetime="2023-11">Nov 2023</time></div>
+                <div class="ec-desc">
+                  Built and maintained a website for the campus residence. Provided IT support across the residence community.
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-        <!-- Tech -->
-  <section class="section" style="margin-top:20px;">
-    <div class="section-title">Tech I Have Worked With Quite A Lot</div>
-    <div class="tech-row">
-      Python <span class="pipe" style="font-weight:900;"> ·  </span>
-      Java <span class="pipe" style="font-weight:900;"> ·  </span>
-      C++ <span class="pipe" style="font-weight:900;"> ·  </span>
-      C <span class="pipe" style="font-weight:900;"> ·  </span>
-      C# <span class="pipe" style="font-weight:900;"> ·  </span>
-      Linux <span class="pipe" style="font-weight:900;"> ·  </span>
-      .NET <span class="pipe" style="font-weight:900;"> ·  </span>
-      ASP.NET <span class="pipe" style="font-weight:900;"> ·  </span>
-      HTML, JavaScript &amp; CSS <span class="pipe" style="font-weight:900;">  · </span>
-      Jupyter Notebooks <span class="pipe" style="font-weight:900;">  · </span>
-      MS SQL Server 
-    </div>
-  </section>
+      <!-- ══ TECH ══ -->
+      <section class="section section-mt" aria-label="Technologies I have worked with">
+        <div class="section-title" role="heading" aria-level="2">Technical Skills</div>
+        <div class="tech-row">
+          Python <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          Java <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          C++ <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          C <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          C# <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          Linux <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          .NET <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          ASP.NET <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          HTML, JavaScript &amp; CSS <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          Jupyter Notebooks <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          OpenCode <span class="pipe pipe-bold" aria-hidden="true"> ·  </span>
+          MS SQL Server
+        </div>
+      </section>
+
     </div>
   </body>
+  <button class="cv-theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
+  <script>
+    (function() {
+      const stored = localStorage.getItem("theme");
+      if (stored !== "light") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        if (!stored) localStorage.setItem("theme", "dark");
+      }
+    })();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.getAttribute("data-theme") === "dark") {
+        html.removeAttribute("data-theme");
+        localStorage.setItem("theme", "light");
+      } else {
+        html.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+  </script>
 </html>

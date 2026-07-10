@@ -29,6 +29,9 @@
               <a href="./index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
+              <a href="./projects.html" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
               <a
                 href="./career.html"
                 class="nav-link active"
@@ -40,6 +43,9 @@
             <li class="nav-item"><a href="./art.html" class="nav-link">Art</a></li>
             <li class="nav-item"><a href="./thesis.html" class="nav-link">Honours Thesis</a></li>
 <li class="nav-item"><a href="./mathematics.html" class="nav-link">Self Study</a></li>
+            <li class="nav-item">
+              <button class="theme-toggle-nav" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
+            </li>
           </ul>
         </header>
       </div>
@@ -50,33 +56,33 @@
 
     <section>
 
-      <div class="d-flex flex-column justify-content-center align-items-center" style="gap:5px">
+      <div class="career-list">
 
-        <div class="career-card add_30_for_mobile">
+        <div class="career-card">
           <div class="date">2026-<span>(current)</span></div>
           <div
             class="company-card"
           >
             <div class="logo-item">
-              <img src="./assets/career-images/PSG_Logo.png" />
+              <img src="./assets/career-images/PSG_Logo.png" alt="PSG Financial Services logo" />
             </div>
             <div class="description-container">
               <div class="title-item">Graduate Software Developer</div>
               <div class="location-item">PSG Financial Services, Cape Town</div>
-              <div class="explanation-item">I use C# and it's frameworks, with Angular to work on web applications.</div>
+              <div class="explanation-item">I use C# and its frameworks, with Angular to work on web applications.</div>
               <div class="skills-item">Skills: C# | .NET | ASP.NET | Angular | Agile</div>
             </div>
             <div class="itentifier-item"><span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">experience</span></div>
           </div>
         </div>
 
-        <div class="career-card add_50_for_mobile">
+        <div class="career-card">
           <div class="date">2025 </div>
           <div
             class="company-card"
           >
             <div class="logo-item">
-              <img src="./assets/career-images/UCT_Logo.png " />
+              <img src="./assets/career-images/UCT_Logo.png" alt="University of Cape Town logo" />
             </div>
             <div class="description-container">
               <div class="title-item">Graduated With Honours in BSc Eng Electrical and Computer Engineering</div>
@@ -94,41 +100,35 @@
             class="company-card"
           >
             <div class="logo-item">
-              <img src="./assets/career-images/Peralex_Logo.jpg" />
+              <img src="./assets/career-images/Peralex_Logo.jpg" alt="Peralex Electronics logo" />
             </div>
             <div class="description-container">
               <div class="title-item">Software Development Intern</div>
               <div class="location-item">Peralex Electronics, Cape Town</div>
               <div class="explanation-item">Developed an application to view electromagnetic results.</div>
-              <div class="explanation-item">References: <span><a href="
-skippy@peralex.com
-
-">skippy@peralex.com</a></span>, <span><a href='./references/peralex-ref.pdf'> reference letter</a></span></div> 
+              <div class="explanation-item">References: <a href="mailto:skippy@peralex.com">skippy@peralex.com</a>, <a href='./references/peralex-ref.pdf'>reference letter</a></div> 
               <div class="skills-item">Skills: Python | OOP Design | Electromagnetics | Agile</div>
             </div>
             <div class="itentifier-item"><span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">experience</span></div>
           </div>
         </div>
 
-        <div class="career-card reduce-mb-for-mobile">
-          <div class="date">2024 <spa>(4-weeks)</spa></div>
+        <div class="career-card">
+          <div class="date">2024 <span>(4-weeks)</span></div>
           <div
             class="company-card"
           >
             <div class="logo-item">
-              <img src="./assets/career-images/Electrum_Logo.png" />
+              <img src="./assets/career-images/Electrum_Logo.png" alt="Electrum Payments logo" />
             </div>
             <div class="description-container">
               <div class="title-item">Software Development Intern</div>
               <div class="location-item">Electrum Payments, Cape Town</div>
               <div class="explanation-item">Improved CDV system.</div>
-                            <div class="explanation-item">References: <span><a href="
-johandtmusicscore@gmail.com
-
-">johandtmusicscore@gmail.com</a></span>, <span><a href='./references/electrum.pdf'> reference letter</a></span></div> 
-              <div class="skills-item">Skills: Java | OOP Design | Sping Boot | Agile</div>
+              <div class="explanation-item">References: <a href="mailto:johandtmusicscore@gmail.com">johandtmusicscore@gmail.com</a>, <a href='./references/electrum.pdf'>reference letter</a></div> 
+              <div class="skills-item">Skills: Java | OOP Design | Spring Boot | Agile</div>
             </div>
-            <div class="itentifier-item"><span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">experience</span>  </div>
+            <div class="itentifier-item"><span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">experience</span></div>
           </div>
         </div>
 
@@ -138,20 +138,18 @@ johandtmusicscore@gmail.com
             class="company-card"
           >
             <div class="logo-item">
-              <img src="./assets/career-images/UCT_Logo.png " />
+              <img src="./assets/career-images/UCT_Logo.png" alt="University of Cape Town logo" />
             </div>
             <div class="description-container">
               <div class="title-item">Started BSc Eng in Electrical and Computer Engineering</div>
               <div class="location-item">University of Cape Town, Cape Town</div>
-              <!-- <div class="explanation-item">I use C# and it's frameworks, with Angular to work on web applications.</div>
-              <div class="skills-item">Skills: C# | .NET | ASP.NET | Angular | Agile</div> -->
             </div>
             <div class="itentifier-item"><span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">education</span></div>
           </div>
         </div>
 
       </div>
-    </div>
+
     </section>
 
     <script
@@ -159,5 +157,25 @@ johandtmusicscore@gmail.com
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      (function() {
+        const stored = localStorage.getItem("theme");
+        if (stored !== "light") {
+          document.documentElement.setAttribute("data-theme", "dark");
+          if (!stored) localStorage.setItem("theme", "dark");
+        }
+      })();
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        if (html.getAttribute("data-theme") === "dark") {
+          html.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+    </script>
   </body>
 </html>

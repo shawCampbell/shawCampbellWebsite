@@ -22,20 +22,20 @@
       .nav-pills .nav-link.active,
       .nav-pills .show > .nav-link {
         color: var(--bs-nav-pills-link-active-color);
-        background-color: #262627;
+        background-color: var(--nav-active-bg, #262627);
       }
       .nav-link {
-        color: #262627;
+        color: var(--nav-link, #262627);
       }
       .container {
-        border-bottom-color: #262627;
+        border-bottom-color: var(--text, #262627);
         border-bottom-width: 50px;
       }
       .description {
         text-align: center;
         font-size: 1.5rem;
         font-weight: 350;
-        color: #8c8c8d;
+        color: var(--text-muted, #8c8c8d);
       }
 
       /* =====================
@@ -43,8 +43,8 @@
          ===================== */
       body {
         font-family: "Libre Baskerville", serif;
-        background-color: #fafaf8;
-        color: #262627;
+        background-color: var(--bg, #fafaf8);
+        color: var(--text, #262627);
       }
 
       /* =====================
@@ -252,13 +252,6 @@
       .section-nav {
         display: flex;
         justify-content: center;
-        gap: 3rem;
-        margin: 2.5rem 0 3rem;
-      }
-
-      .section-nav {
-        display: flex;
-        justify-content: center;
         gap: 2rem;
         margin: 2.5rem 0 3rem;
       }
@@ -320,14 +313,13 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
       }
 
+      /* ── Password gate ── */
       #gate {
-        position: fixed;
-        inset: 0;
+        min-height: calc(100vh - 60px);
         background: #fafaf8;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 9999;
       }
 
       .gate-box {
@@ -345,6 +337,20 @@
         text-transform: uppercase;
         color: #8c8c8d;
         margin-bottom: 1rem;
+      }
+
+      .gate-password-hint {
+        font-size: 0.85rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+
+      .gate-password-hint code {
+        font-family: "Libre Baskerville", serif;
+        background: #f0f0ee;
+        padding: 0.15rem 0.5rem;
+        border-radius: 3px;
+        font-size: 0.95rem;
       }
 
       #gate-input {
@@ -378,9 +384,139 @@
         margin-bottom: 0;
       }
 
-      a {
-        margin-left: 3%;
+      .theme-toggle-nav {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.15rem;
+        padding: 0 6px;
+        color: var(--nav-link, #262627);
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        transition: color 0.2s ease;
       }
+      .theme-toggle-nav:hover {
+        background: none;
+        color: var(--nav-link, #262627);
+        transform: none;
+        box-shadow: none;
+      }
+      .theme-toggle-nav::before {
+        content: "🌙";
+      }
+      [data-theme="dark"] .theme-toggle-nav::before {
+        content: "☀";
+      }
+
+      [data-theme="dark"] {
+        --bg: #1a1a1a;
+        --text: #e0e0e0;
+        --text-muted: #999;
+        --text-light: #bbb;
+        --nav-active-bg: #555;
+        --nav-link: #ccc;
+      }
+
+      [data-theme="dark"] body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+      }
+
+      [data-theme="dark"] .page-intro p {
+        color: #bbb;
+      }
+
+      [data-theme="dark"] .book-card {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+
+      [data-theme="dark"] .stat-block {
+        border-color: #444;
+      }
+
+      [data-theme="dark"] .stat-value {
+        color: #e0e0e0;
+      }
+
+      [data-theme="dark"] .description {
+        color: #999;
+      }
+
+      [data-theme="dark"] .section-link {
+        background: #2a2a2a;
+        border-color: #555;
+        color: #e0e0e0;
+      }
+
+      [data-theme="dark"] .chapter-accordion .accordion-button {
+        background-color: #2a2a2a;
+        color: #e0e0e0;
+      }
+
+      [data-theme="dark"] .chapter-accordion .accordion-button:not(.collapsed) {
+        background-color: #333;
+      }
+
+      [data-theme="dark"] .chapter-accordion .accordion-item {
+        border-color: #444;
+      }
+
+      [data-theme="dark"] .chapter-accordion .accordion-body {
+        background: #2a2a2a;
+      }
+
+      [data-theme="dark"] .log-section h2 {
+        border-bottom-color: #444;
+      }
+
+      [data-theme="dark"] .log-entry {
+        border-bottom-color: #333;
+      }
+
+      [data-theme="dark"] .log-text {
+        color: #ccc;
+      }
+
+      [data-theme="dark"] .book-cover-wrap {
+        border-color: #444;
+      }
+
+      [data-theme="dark"] .stat-label {
+        color: #888;
+      }
+
+      [data-theme="dark"] .subsection {
+        color: #5a8aba;
+      }
+
+      [data-theme="dark"] #gate {
+        background: #1a1a1a;
+      }
+
+      [data-theme="dark"] .gate-box {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+
+      [data-theme="dark"] .gate-box p {
+        color: #ccc;
+      }
+
+      [data-theme="dark"] .gate-password-hint {
+        color: #ccc;
+      }
+
+      [data-theme="dark"] .gate-password-hint code {
+        background: #3a3a3a;
+        color: #e0e0e0;
+      }
+
+      [data-theme="dark"] .section-link {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
     </style>
   </head>
 
@@ -396,6 +532,9 @@
               <a href="./index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
+              <a href="./projects.html" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
               <a href="./career.html" class="nav-link">Career</a>
             </li>
             <li class="nav-item">
@@ -407,10 +546,13 @@
             <li class="nav-item">
               <a href="./thesis.html" class="nav-link">Honours Thesis</a>
             </li>
-            <li class="nav-item" aria-current="page">
-              <a href="./mathematics.html" class="nav-link active">
+            <li class="nav-item">
+              <a href="./mathematics.html" class="nav-link active" aria-current="page">
                 Self Study
               </a>
+            </li>
+            <li class="nav-item">
+              <button class="theme-toggle-nav" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
             </li>
           </ul>
         </header>
@@ -421,6 +563,10 @@
       <div class="gate-box">
         <p class="gate-title">Restricted Access</p>
 
+        <p class="gate-password-hint">
+          Password: <code>hilbertSpace</code>
+        </p>
+
         <input
           type="password"
           id="gate-input"
@@ -428,13 +574,12 @@
           onkeydown="handleGate(event)"
           autofocus
         />
-        <div style="width: 50%; margin-left: 25%; margin-top: 30px">
-          <p>
-            I have been self studying real analysis and maybe stochastic
-            calculus by this time. This page has my handwritten solutions to
-            exercises to textbooks I have used, and so I cannot make it
-            publically accessable (my answers are probably not even right
-            haha...), so contact me if you want the password to see my progress.
+        <div style="width: 80%; margin: 20px auto 0">
+          <p style="font-size: 0.85rem; line-height: 1.6;">
+            This page has my handwritten solutions to exercises. I cannot make
+            it publicly accessible (my answers are probably not even right
+            haha...), but I want to share my progress. The password is shown
+            above — just type it in.
           </p>
         </div>
         <p id="gate-error"></p>
@@ -449,11 +594,11 @@
       <div class="page-intro px-3">
         <h1>Self Study</h1>
         <p class="description" style="font-size: 1rem; margin-top: 0.5rem">
-          Out of love for the rigorous and abstract thoery used in quantitative
+          Out of love for the rigorous and abstract theory used in quantitative
           finance, I have been self studying real analysis and stochastic
           calculus using textbooks used in UCT's masters of financial
           engineering program. Below details my progress with my handwritten
-          solutions to excersises and a dated study log.
+          solutions to exercises and a dated study log.
         </p>
       </div>
 
@@ -514,18 +659,17 @@
               </div>
 
               <p
-                style="
-                  font-size: 0.82rem;
-                  color: #777;
-                  text-align: center;
-                  margin-top: -0.8rem;
-                  margin-bottom: 1.2rem;
-                  font-style: italic;
-                "
-                id="soln"
-              >
-                Real Analysis — P. Ouwehand
-              </p>
+                  style="
+                    font-size: 0.82rem;
+                    text-align: center;
+                    margin-top: -0.8rem;
+                    margin-bottom: 1.2rem;
+                    font-style: italic;
+                  "
+                  id="soln"
+                >
+                  Real Analysis — P. Ouwehand
+                </p>
 
               <!-- Chapters -->
               <!-- <p class="section-heading">Written Solutions</p>
@@ -541,7 +685,7 @@
               >
                 <p
                   class="section-heading"
-                  style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                  style="margin: 0; font-size: 13px; color: var(--text, #262627)"
                   id="solutions"
                 >
                   Written Solutions By
@@ -559,7 +703,7 @@
                   <input
                     type="checkbox"
                     id="toggleAll1"
-                    onchange="toggleAll1(this)"
+                    onchange="toggleAll(this, 'ra-accordion')"
                     checked
                   />
                   <span id="toggleLabel1">Expand All</span>
@@ -567,7 +711,7 @@
               </div>
               <p
                 class="section-heading"
-                style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                style="margin: 0; font-size: 13px; color: var(--text, #262627)"
               >
                 chapter
               </p>
@@ -957,17 +1101,16 @@
               </div>
 
               <p
-                style="
-                  font-size: 0.82rem;
-                  color: #777;
-                  text-align: center;
-                  margin-top: -0.8rem;
-                  margin-bottom: 1.2rem;
-                  font-style: italic;
-                "
-              >
-                Stochastic Calculus for Finance I — S. E. Shreve
-              </p>
+                  style="
+                    font-size: 0.82rem;
+                    text-align: center;
+                    margin-top: -0.8rem;
+                    margin-bottom: 1.2rem;
+                    font-style: italic;
+                  "
+                >
+                  Stochastic Calculus for Finance I — S. E. Shreve
+                </p>
 
               <div
                 style="
@@ -978,7 +1121,7 @@
               >
                 <p
                   class="section-heading"
-                  style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                  style="margin: 0; font-size: 13px; color: var(--text, #262627)"
                 >
                   Written Solutions By
                 </p>
@@ -995,7 +1138,7 @@
                   <input
                     type="checkbox"
                     id="toggleAll2"
-                    onchange="toggleAll2(this)"
+                    onchange="toggleAll(this, 's1-accordion')"
                     checked
                   />
                   <span id="toggleLabel2">Expand All</span>
@@ -1003,7 +1146,7 @@
               </div>
               <p
                 class="section-heading"
-                style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                style="margin: 0; font-size: 13px; color: var(--text, #262627)"
               >
                 chapter
               </p>
@@ -1116,17 +1259,16 @@
               </div>
 
               <p
-                style="
-                  font-size: 0.82rem;
-                  color: #777;
-                  text-align: center;
-                  margin-top: -0.8rem;
-                  margin-bottom: 1.2rem;
-                  font-style: italic;
-                "
-              >
-                Stochastic Calculus for Finance II — S. E. Shreve
-              </p>
+                  style="
+                    font-size: 0.82rem;
+                    text-align: center;
+                    margin-top: -0.8rem;
+                    margin-bottom: 1.2rem;
+                    font-style: italic;
+                  "
+                >
+                  Stochastic Calculus for Finance II — S. E. Shreve
+                </p>
 
               <div
                 style="
@@ -1137,7 +1279,7 @@
               >
                 <p
                   class="section-heading"
-                  style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                  style="margin: 0; font-size: 13px; color: var(--text, #262627)"
                 >
                   Written Solutions By
                 </p>
@@ -1153,7 +1295,7 @@
                   <input
                     type="checkbox"
                     id="toggleAll1"
-                    onchange="toggleAll3(this)"
+                    onchange="toggleAll(this, 's2-accordion')"
                     checked
                   />
                   <span id="toggleLabel3">Expand All</span>
@@ -1161,7 +1303,7 @@
               </div>
               <p
                 class="section-heading"
-                style="margin: 0; font-size: 13px; color: rgb(63, 63, 63)"
+                style="margin: 0; font-size: 13px; color: var(--text, #262627)"
               >
                 chapter
               </p>
@@ -1296,11 +1438,11 @@
           <div class="log-entry">
             <p class="log-date">5 May 2026</p>
             <p class="log-text">
-              I have been continuing with real-analysis convergance of
-              sequences. I was so distrubed for a long time about if it is okay
+              I have been continuing with real-analysis convergence of
+              sequences. I was so disturbed for a long time about if it is okay
               to use '>=' in place of > if you are unsure. Yes you can
               apparently - '>' means '>=', but '>=' does not mean '>'. One is
-              simply a weaker statment.
+              simply a weaker statement.
 
               <br />
               <br />
@@ -1312,10 +1454,10 @@
           <div class="log-entry">
             <p class="log-date">4 May 2026</p>
             <p class="log-text">
-              I was focsuing on convergance of sequences in real analysis today.
-              I was suprised to find that I forgot so much about absolute values
+              I was focusing on convergence of sequences in real analysis today.
+              I was surprised to find that I forgot so much about absolute values
               from first-year. I struggled to get my head around this
-              "algorithm" when it comes to covergance, but I feel I am satified
+              "algorithm" when it comes to convergence, but I feel I am satisfied
               now. A sequence converges when we can find an algorithm for
               generating an N such that all values bigger than xN are smaller
               than any epsilon.
@@ -1339,15 +1481,15 @@
               <br />
 
               The author briefly remarked a topological view of the definition
-              of convergance, and it is the coolest thing I have seen so far.
-              The contraint of defining distance is abandoned, and all we need
+              of convergence, and it is the coolest thing I have seen so far.
+              The constraint of defining distance is abandoned, and all we need
               is open sets.
             </p>
           </div>
           <div class="log-entry">
             <p class="log-date">2 May 2026</p>
             <p class="log-text">
-              I Finally started with sequences and series in real analysis. The
+              I finally started with sequences and series in real analysis. The
               last questions from the first-chapter were quite challenging, and
               keeping the proofs cogent was hard. I also had to get a feel for
               when to use which axioms casually without explaining it. I
@@ -1355,7 +1497,7 @@
               being asked about, but should not accidentally derive all of
               algebra if the question is about completeness. The questions in
               the beginning of chapter two forced me to remember first-year and
-              high school sequences and series. I was distrubed to find that the
+              high school sequences and series. I was disturbed to find that the
               rationals are not closed when limits are introduced - i.e. a
               sequence of rationals can converge to an irrational, that was
               really cool to see.
@@ -1397,105 +1539,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      function expandAll1() {
-        document
-          .querySelectorAll("#ra-accordion .accordion-collapse")
-          .forEach((el) => {
-            new bootstrap.Collapse(el, { show: true });
-          });
-      }
-
-      function collapseAll1() {
-        document
-          .querySelectorAll("#s1-accordion .accordion-collapse")
-          .forEach((el) => {
-            new bootstrap.Collapse(el, { toggle: false }).hide();
-          });
-      }
-    </script>
-    <script>
-      function toggleAll1(checkbox) {
-        const items = document.querySelectorAll(
-          "#ra-accordion .accordion-collapse",
-        );
-
-        items.forEach((el) => {
-          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {
-            toggle: false,
-          });
-
-          if (checkbox.checked) {
-            bsCollapse.show();
-          } else {
-            bsCollapse.hide();
-          }
-        });
-
-        // Update label text
-        // document.getElementById("toggleLabel1").textContent = checkbox.checked
-        //   ? "Collapse All"
-        //   : "Expand All";
-      }
-    </script>
-    <script>
-      function toggleAll2(checkbox) {
-        const items = document.querySelectorAll(
-          "#s1-accordion .accordion-collapse",
-        );
-
-        items.forEach((el) => {
-          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {
-            toggle: false,
-          });
-
-          if (checkbox.checked) {
-            bsCollapse.show();
-          } else {
-            bsCollapse.hide();
-          }
-        });
-
-        // Update label text
-        // document.getElementById("toggleLabel2").textContent = checkbox.checked
-        //   ? "Collapse All"
-        //   : "Expand All";
-      }
-    </script>
-    <script>
-      function toggleAll3(checkbox) {
-        const items = document.querySelectorAll(
-          "#s2-accordion .accordion-collapse",
-        );
-
-        items.forEach((el) => {
-          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {
-            toggle: false,
-          });
-
-          if (checkbox.checked) {
-            bsCollapse.show();
-          } else {
-            bsCollapse.hide();
-          }
-        });
-
-        // Update label text
-        // document.getElementById("toggleLabel3").textContent = checkbox.checked
-        //   ? "Collapse All"
-        //   : "Expand All";
-      }
-    </script>
-
-    <script>
       const PASSWORD = "hilbertSpace";
       const STORAGE_KEY = "siteUnlocked";
 
-      // Run on page load
       window.onload = function () {
         if (localStorage.getItem(STORAGE_KEY) === "true") {
           unlockPage();
         }
-        unlockPage();
       };
 
       function handleGate(e) {
@@ -1503,7 +1553,7 @@
           const input = document.getElementById("gate-input").value;
 
           if (input === PASSWORD) {
-            localStorage.setItem(STORAGE_KEY, "true"); // <-- persist access
+            localStorage.setItem(STORAGE_KEY, "true");
             unlockPage();
           } else {
             document.getElementById("gate-error").textContent =
@@ -1515,6 +1565,41 @@
       function unlockPage() {
         document.getElementById("gate").style.display = "none";
         document.getElementById("protected-content").style.display = "block";
+      }
+
+      function toggleAll(checkbox, accordionId) {
+        const items = document.querySelectorAll(
+          "#" + accordionId + " .accordion-collapse",
+        );
+        items.forEach((el) => {
+          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {
+            toggle: false,
+          });
+          if (checkbox.checked) {
+            bsCollapse.show();
+          } else {
+            bsCollapse.hide();
+          }
+        });
+      }
+
+      (function() {
+        const stored = localStorage.getItem("theme");
+        if (stored !== "light") {
+          document.documentElement.setAttribute("data-theme", "dark");
+          if (!stored) localStorage.setItem("theme", "dark");
+        }
+      })();
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        if (html.getAttribute("data-theme") === "dark") {
+          html.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+        }
       }
     </script>
   </body>

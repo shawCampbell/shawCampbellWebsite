@@ -29,23 +29,25 @@
               <a href="./index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
+              <a href="./projects.html" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
               <a href="./career.html" class="nav-link">Career</a>
             </li>
             <li class="nav-item">
               <a href="./reading.html" class="nav-link">Reading</a>
             </li>
             <li class="nav-item">
-              <a href="./art.html" class="nav-link active" aria-current="page"
-                >Art</a
-              >
+              <a href="./art.html" class="nav-link active" aria-current="page">Art</a>
             </li>
             <li class="nav-item">
               <a href="./thesis.html" class="nav-link">Honours Thesis</a>
             </li>
             <li class="nav-item">
-              <a href="./mathematics.html" class="nav-link"
-                >Self Study</a
-              >
+              <a href="./mathematics.html" class="nav-link">Self Study</a>
+            </li>
+            <li class="nav-item">
+              <button class="theme-toggle-nav" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
             </li>
           </ul>
         </header>
@@ -56,20 +58,41 @@
       <h1 class="name">Art</h1>
       <h1 class="description">Shown are some of the drawing I have created.</h1>
 
-      <div class="art-container ">
-        <div><img class = "shadow" src="./assets/art-images/Xoisan.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/Zaian.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/SmallZaian.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/Self.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/mouth.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/KhoisanMan.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/Jeff.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/Jasveer.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/GettingMarried.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/eye.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/dog.png" /></div>
-        <div><img class = "shadow" src="./assets/art-images/Brain.png" /></div>
+      <div class="art-container">
+        <div><img class="shadow" src="./assets/art-images/Xoisan.png" alt="Xoisan drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/Zaian.png" alt="Zaian drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/SmallZaian.png" alt="Small Zaian drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/Self.png" alt="Self portrait drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/mouth.png" alt="Mouth drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/KhoisanMan.png" alt="Khoisan man drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/Jeff.png" alt="Jeff drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/Jasveer.png" alt="Jasveer drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/GettingMarried.png" alt="Getting married drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/eye.png" alt="Eye drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/dog.png" alt="Dog drawing" /></div>
+        <div><img class="shadow" src="./assets/art-images/Brain.png" alt="Brain drawing" /></div>
       </div>
     </section>
+
+    <script>
+      (function() {
+        const stored = localStorage.getItem("theme");
+        if (stored !== "light") {
+          document.documentElement.setAttribute("data-theme", "dark");
+          if (!stored) localStorage.setItem("theme", "dark");
+        }
+      })();
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        if (html.getAttribute("data-theme") === "dark") {
+          html.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+    </script>
   </body>
 </html>

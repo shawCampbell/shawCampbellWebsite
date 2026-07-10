@@ -1,0 +1,113 @@
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: var(--nav-active-bg, #262627);
+}
+
+.nav-link{
+    color: var(--nav-link, #262627);
+}
+
+.container {
+    border-bottom-color: var(--text, #262627);
+    border-bottom-width: 50px;
+}
+
+body {
+    background-color: var(--bg, #fafaf8);
+    font-family: "Libre Baskerville", serif;
+    color: var(--text, #262627);
+}
+
+.projects-grid {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-light, #e4e4e0);
+    border-radius: 8px;
+    padding: 20px 24px;
+    transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.project-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text, #262627);
+}
+
+.project-tag {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent, #1a5fa8);
+    background: var(--accent-soft, #edf3fb);
+    border: 1px solid var(--border-light, #e4e4e0);
+    padding: 2px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: var(--text-light, #555);
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.project-skills {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent, #1a5fa8);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--accent, #1a5fa8);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.theme-toggle-nav::before {
+    content: "🌙";
+}
+
+[data-theme="dark"] .theme-toggle-nav::before {
+    content: "☀";
+}
+
+[data-theme="dark"] .project-card {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+[data-theme="dark"] .project-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
