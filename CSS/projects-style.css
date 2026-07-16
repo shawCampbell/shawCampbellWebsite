@@ -111,3 +111,49 @@ body {
 [data-theme="dark"] .project-card:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .nav {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 2px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        width: 94%;
+        padding-top: 16px;
+        gap: 14px;
+    }
+
+    .project-card {
+        padding: 14px 16px;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+    }
+
+    .project-skills {
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-header {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .project-tag {
+        align-self: flex-start;
+    }
+}

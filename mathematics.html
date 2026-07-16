@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shaw Campbell — Self Study</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -515,6 +516,98 @@
 
       [data-theme="dark"] .section-link {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      header .nav {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        gap: 2px;
+      }
+
+      @media (max-width: 768px) {
+        .page-intro {
+          margin: 2rem auto 2rem;
+          padding: 0 1rem;
+        }
+
+        .page-intro h1 {
+          font-size: 1.4rem;
+        }
+
+        .page-intro p {
+          font-size: 0.9rem;
+        }
+
+        .books-row {
+          flex-wrap: wrap !important;
+          gap: 1rem;
+        }
+
+        .books-row .col-4 {
+          width: 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .book-card {
+          padding: 1.2rem 1rem 1.5rem;
+        }
+
+        .book-cover-wrap {
+          width: 40%;
+          margin: 0 auto 1rem;
+        }
+
+        .section-nav {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.8rem;
+          margin: 1.5rem 0 2rem;
+        }
+
+        .section-link {
+          min-width: 200px;
+          padding: 0.7rem 1rem;
+          font-size: 1rem;
+        }
+
+        .log-section {
+          padding: 0 1rem;
+          margin-top: 2.5rem;
+        }
+
+        .gate-box {
+          padding: 1.5rem;
+          margin: 0 1rem;
+        }
+
+        .description {
+          font-size: 1rem !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .book-cover-wrap {
+          width: 60%;
+        }
+
+        .book-stats {
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+
+        .chapter-accordion .accordion-button {
+          font-size: 0.78rem;
+        }
+
+        .log-text {
+          font-size: 0.85rem;
+        }
       }
 
     </style>

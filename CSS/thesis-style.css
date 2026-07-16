@@ -44,3 +44,22 @@ body {
     background-color: #1a1a1a;
     color: #e0e0e0;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .nav {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 2px;
+}
+
+@media (max-width: 480px) {
+    .slides-container {
+        width: 98%;
+        padding-top: 16px;
+        gap: 12px;
+    }
+}

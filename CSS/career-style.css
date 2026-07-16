@@ -119,6 +119,40 @@ body {
     }
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header .nav {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 2px;
+}
+
+@media (max-width: 480px) {
+    .career-list {
+        width: 96%;
+    }
+
+    .company-card {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .title-item {
+        font-size: 0.9rem;
+    }
+
+    .explanation-item {
+        font-size: 0.8rem;
+    }
+
+    .skills-item {
+        font-size: 0.78rem;
+    }
+}
+
 [data-theme="dark"] body {
     background-color: #1a1a1a;
     color: #e0e0e0;
