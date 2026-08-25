@@ -1,3 +1,3 @@
 ## This is my website
 
-I did code it up myself at first - and then installed OpenCode and DeepSeek Flash changed a bunch of stuff.
+I did write most of it by myself - and then I installed OpenCode. I thereafter used DeepSeek to improve most of it.
