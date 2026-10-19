@@ -71,11 +71,42 @@ header .nav {
     gap: 2px;
 }
 
+.title-item {
+    background-color: var(--bg, #fafaf8);
+    font-size: 0.9rem;
+
+    font-weight: 600;
+    color: var(--text, #262627);
+}
+
+
 @media (max-width: 480px) {
-    .book-container {
+
+        .book-container {
         width: 96%;
         padding-top: 24px;
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 8px;
+    }
+
+    .career-list {
+        width: 96%;
+    }
+
+    .company-card {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .title-item {
+        font-size: 0.9rem;
+    }
+
+    .explanation-item {
+        font-size: 0.8rem;
+    }
+
+    .skills-item {
+        font-size: 0.78rem;
     }
 }
