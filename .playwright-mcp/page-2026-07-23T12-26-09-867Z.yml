@@ -1,0 +1,451 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e6]:
+      - link "Go to homepage" [ref=e7] [cursor=pointer]:
+        - /url: /eu/
+        - img [ref=e8]
+      - list [ref=e36]:
+        - listitem [ref=e37]:
+          - link "Who we are" [ref=e38] [cursor=pointer]:
+            - /url: /eu/who-we-are
+            - generic [ref=e40]: Who we are
+        - listitem [ref=e41]:
+          - link "What we do" [ref=e42] [cursor=pointer]:
+            - /url: /eu/what-we-do
+            - generic [ref=e44]: What we do
+        - listitem [ref=e45]:
+          - link "Access our liquidity" [ref=e46] [cursor=pointer]:
+            - /url: /eu/access-our-liquidity
+            - generic [ref=e48]: Access our liquidity
+        - listitem [ref=e49]:
+          - link "Strategic Investments" [ref=e50] [cursor=pointer]:
+            - /url: /eu/strategic-investments
+            - generic [ref=e52]: Strategic Investments
+        - listitem [ref=e53]:
+          - link "Positive impact" [ref=e54] [cursor=pointer]:
+            - /url: /eu/positive-impact
+            - generic [ref=e56]: Positive impact
+      - link "Search Careers" [ref=e57] [cursor=pointer]:
+        - /url: /eu/search-careers
+        - generic [ref=e58]: Search Careers
+        - img [ref=e62]
+      - button "Open main menu" [ref=e64] [cursor=pointer]:
+        - img [ref=e65]
+    - generic [ref=e70]:
+      - generic [ref=e88]:
+        - generic [ref=e91]:
+          - heading "Search careers" [level=1] [ref=e93]
+          - generic [ref=e95]:
+            - paragraph [ref=e96]: Benefit from continuous learning and a high-performance culture, where you can drive your career while working with the brightest minds in trading and technology.
+            - paragraph [ref=e97]: Interact, innovate, and make an impact from day one.
+        - generic [ref=e99]:
+          - generic [ref=e101]:
+            - generic [ref=e104]:
+              - img [ref=e105]
+              - textbox "JobSearchField" [ref=e107]:
+                - /placeholder: Search
+            - generic [ref=e109]:
+              - generic [ref=e111]: Business function
+              - generic [ref=e113]:
+                - generic [ref=e115]: All
+                - img [ref=e116]
+            - generic [ref=e119]:
+              - generic [ref=e121]: Location
+              - generic [ref=e123]:
+                - generic [ref=e125]: All
+                - img [ref=e126]
+            - generic [ref=e129]:
+              - generic [ref=e131]: Experience level
+              - generic [ref=e133]:
+                - generic [ref=e135]: All
+                - img [ref=e136]
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]: Showing 10 of 144 jobs
+              - link "See All Favorites" [ref=e142] [cursor=pointer]:
+                - /url: /eu/favorite-jobs
+                - generic [ref=e144]: See All Favorites
+            - separator [ref=e145]
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - link "Quantitative Trader Intern - Summer 2027 Intern Trading Chicago" [ref=e148] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4823923101
+                  - generic [ref=e149]:
+                    - generic [ref=e150]:
+                      - heading "Quantitative Trader Intern - Summer 2027" [level=2] [ref=e151]
+                      - button "Add Quantitative Trader Intern - Summer 2027" [ref=e152]:
+                        - img [ref=e153]
+                    - generic [ref=e156]:
+                      - generic [ref=e157]:
+                        - img [ref=e158]
+                        - generic [ref=e160]: Intern
+                      - generic [ref=e161]:
+                        - img [ref=e162]
+                        - generic [ref=e164]: Trading
+                      - generic [ref=e165]:
+                        - img [ref=e166]
+                        - generic [ref=e169]: Chicago
+                - link "Apply Now" [ref=e170] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4823923101/apply
+                  - generic [ref=e171]: Apply Now
+                  - img [ref=e175]
+              - separator [ref=e177]
+              - generic [ref=e178]:
+                - link "Lab Technician Experienced Technology Chicago" [ref=e179] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4898447101
+                  - generic [ref=e180]:
+                    - generic [ref=e181]:
+                      - heading "Lab Technician" [level=2] [ref=e182]
+                      - button "Add Lab Technician" [ref=e183]:
+                        - img [ref=e184]
+                    - generic [ref=e187]:
+                      - generic [ref=e188]:
+                        - img [ref=e189]
+                        - generic [ref=e191]: Experienced
+                      - generic [ref=e192]:
+                        - img [ref=e193]
+                        - generic [ref=e195]: Technology
+                      - generic [ref=e196]:
+                        - img [ref=e197]
+                        - generic [ref=e200]: Chicago
+                - link "Apply Now" [ref=e201] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4898447101/apply
+                  - generic [ref=e202]: Apply Now
+                  - img [ref=e206]
+              - separator [ref=e208]
+              - generic [ref=e209]:
+                - link "OTC Trader Experienced Trading Zug" [ref=e210] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4805320101
+                  - generic [ref=e211]:
+                    - generic [ref=e212]:
+                      - heading "OTC Trader" [level=2] [ref=e213]
+                      - button "Add OTC Trader" [ref=e214]:
+                        - img [ref=e215]
+                    - generic [ref=e218]:
+                      - generic [ref=e219]:
+                        - img [ref=e220]
+                        - generic [ref=e222]: Experienced
+                      - generic [ref=e223]:
+                        - img [ref=e224]
+                        - generic [ref=e226]: Trading
+                      - generic [ref=e227]:
+                        - img [ref=e228]
+                        - generic [ref=e231]: Zug
+                - link "Apply Now" [ref=e232] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4805320101/apply
+                  - generic [ref=e233]: Apply Now
+                  - img [ref=e237]
+              - separator [ref=e239]
+              - generic [ref=e240]:
+                - link "HR Coordinator Experienced Business Operations Sydney" [ref=e241] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4841704101
+                  - generic [ref=e242]:
+                    - generic [ref=e243]:
+                      - heading "HR Coordinator" [level=2] [ref=e244]
+                      - button "Add HR Coordinator" [ref=e245]:
+                        - img [ref=e246]
+                    - generic [ref=e249]:
+                      - generic [ref=e250]:
+                        - img [ref=e251]
+                        - generic [ref=e253]: Experienced
+                      - generic [ref=e254]:
+                        - img [ref=e255]
+                        - generic [ref=e257]: Business Operations
+                      - generic [ref=e258]:
+                        - img [ref=e259]
+                        - generic [ref=e262]: Sydney
+                - link "Apply Now" [ref=e263] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4841704101/apply
+                  - generic [ref=e264]: Apply Now
+                  - img [ref=e268]
+              - separator [ref=e270]
+              - generic [ref=e271]:
+                - link "Trading Recruiter Experienced Business Operations Amsterdam" [ref=e272] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4814983101
+                  - generic [ref=e273]:
+                    - generic [ref=e274]:
+                      - heading "Trading Recruiter" [level=2] [ref=e275]
+                      - button "Add Trading Recruiter" [ref=e276]:
+                        - img [ref=e277]
+                    - generic [ref=e280]:
+                      - generic [ref=e281]:
+                        - img [ref=e282]
+                        - generic [ref=e284]: Experienced
+                      - generic [ref=e285]:
+                        - img [ref=e286]
+                        - generic [ref=e288]: Business Operations
+                      - generic [ref=e289]:
+                        - img [ref=e290]
+                        - generic [ref=e293]: Amsterdam
+                - link "Apply Now" [ref=e294] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4814983101/apply
+                  - generic [ref=e295]: Apply Now
+                  - img [ref=e299]
+              - separator [ref=e301]
+              - generic [ref=e302]:
+                - link "Technology Recruiter Experienced Business Operations Amsterdam" [ref=e303] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4904706101
+                  - generic [ref=e304]:
+                    - generic [ref=e305]:
+                      - heading "Technology Recruiter" [level=2] [ref=e306]
+                      - button "Add Technology Recruiter" [ref=e307]:
+                        - img [ref=e308]
+                    - generic [ref=e311]:
+                      - generic [ref=e312]:
+                        - img [ref=e313]
+                        - generic [ref=e315]: Experienced
+                      - generic [ref=e316]:
+                        - img [ref=e317]
+                        - generic [ref=e319]: Business Operations
+                      - generic [ref=e320]:
+                        - img [ref=e321]
+                        - generic [ref=e324]: Amsterdam
+                - link "Apply Now" [ref=e325] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4904706101/apply
+                  - generic [ref=e326]: Apply Now
+                  - img [ref=e330]
+              - separator [ref=e332]
+              - generic [ref=e333]:
+                - link "Senior Legal Counsel Experienced Business Operations Hong Kong" [ref=e334] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4841607101
+                  - generic [ref=e335]:
+                    - generic [ref=e336]:
+                      - heading "Senior Legal Counsel" [level=2] [ref=e337]
+                      - button "Add Senior Legal Counsel" [ref=e338]:
+                        - img [ref=e339]
+                    - generic [ref=e342]:
+                      - generic [ref=e343]:
+                        - img [ref=e344]
+                        - generic [ref=e346]: Experienced
+                      - generic [ref=e347]:
+                        - img [ref=e348]
+                        - generic [ref=e350]: Business Operations
+                      - generic [ref=e351]:
+                        - img [ref=e352]
+                        - generic [ref=e355]: Hong Kong
+                - link "Apply Now" [ref=e356] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4841607101/apply
+                  - generic [ref=e357]: Apply Now
+                  - img [ref=e361]
+              - separator [ref=e363]
+              - generic [ref=e364]:
+                - link "Software Engineer - Strategy Experienced Technology Hong Kong" [ref=e365] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4931814101
+                  - generic [ref=e366]:
+                    - generic [ref=e367]:
+                      - heading "Software Engineer - Strategy" [level=2] [ref=e368]
+                      - button "Add Software Engineer - Strategy" [ref=e369]:
+                        - img [ref=e370]
+                    - generic [ref=e373]:
+                      - generic [ref=e374]:
+                        - img [ref=e375]
+                        - generic [ref=e377]: Experienced
+                      - generic [ref=e378]:
+                        - img [ref=e379]
+                        - generic [ref=e381]: Technology
+                      - generic [ref=e382]:
+                        - img [ref=e383]
+                        - generic [ref=e386]: Hong Kong
+                - link "Apply Now" [ref=e387] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4931814101/apply
+                  - generic [ref=e388]: Apply Now
+                  - img [ref=e392]
+              - separator [ref=e394]
+              - generic [ref=e395]:
+                - link "Operations Specialist (Crypto) Experienced Business Operations Sydney" [ref=e396] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4827281101
+                  - generic [ref=e397]:
+                    - generic [ref=e398]:
+                      - heading "Operations Specialist (Crypto)" [level=2] [ref=e399]
+                      - button "Add Operations Specialist (Crypto)" [ref=e400]:
+                        - img [ref=e401]
+                    - generic [ref=e404]:
+                      - generic [ref=e405]:
+                        - img [ref=e406]
+                        - generic [ref=e408]: Experienced
+                      - generic [ref=e409]:
+                        - img [ref=e410]
+                        - generic [ref=e412]: Business Operations
+                      - generic [ref=e413]:
+                        - img [ref=e414]
+                        - generic [ref=e417]: Sydney
+                - link "Apply Now" [ref=e418] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4827281101/apply
+                  - generic [ref=e419]: Apply Now
+                  - img [ref=e423]
+              - separator [ref=e425]
+              - generic [ref=e426]:
+                - link "Graduate Quantitative Researcher (BS/MS) Graduate Trading Chicago" [ref=e427] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4907368101
+                  - generic [ref=e428]:
+                    - generic [ref=e429]:
+                      - heading "Graduate Quantitative Researcher (BS/MS)" [level=2] [ref=e430]
+                      - button "Add Graduate Quantitative Researcher (BS/MS)" [ref=e431]:
+                        - img [ref=e432]
+                    - generic [ref=e435]:
+                      - generic [ref=e436]:
+                        - img [ref=e437]
+                        - generic [ref=e439]: Graduate
+                      - generic [ref=e440]:
+                        - img [ref=e441]
+                        - generic [ref=e443]: Trading
+                      - generic [ref=e444]:
+                        - img [ref=e445]
+                        - generic [ref=e448]: Chicago
+                - link "Apply Now" [ref=e449] [cursor=pointer]:
+                  - /url: /eu/careers/jobs/4907368101/apply
+                  - generic [ref=e450]: Apply Now
+                  - img [ref=e454]
+              - separator [ref=e456]
+            - generic [ref=e457]:
+              - button "Previous" [disabled] [ref=e458]:
+                - img [ref=e459]
+              - button "1" [ref=e461] [cursor=pointer]
+              - button "2" [ref=e462] [cursor=pointer]
+              - button "3" [ref=e463] [cursor=pointer]
+              - button "4" [ref=e464] [cursor=pointer]
+              - button "5" [ref=e465] [cursor=pointer]
+              - button [disabled] [ref=e466]:
+                - img [ref=e467]
+              - button "15" [ref=e469] [cursor=pointer]
+              - button "Next" [ref=e470] [cursor=pointer]:
+                - img [ref=e471]
+      - generic [ref=e477]:
+        - heading "DISCOVER MORE" [level=4] [ref=e482]
+        - generic [ref=e483]:
+          - generic [ref=e487]:
+            - generic [ref=e489]:
+              - heading "Generous benefits" [level=4] [ref=e490]
+              - paragraph [ref=e491]: A variety of benefits are available to all at IMC.
+            - link "Check out our benefits" [ref=e493] [cursor=pointer]:
+              - /url: /eu/careers/benefits
+              - generic [ref=e494]: Check out our benefits
+              - img [ref=e498]
+          - generic [ref=e503]:
+            - generic [ref=e505]:
+              - heading "Recruitment process" [level=4] [ref=e506]
+              - paragraph [ref=e507]: Before you take up the challenge, you'll go through our recruitment process.
+            - link "What to expect" [ref=e509] [cursor=pointer]:
+              - /url: /eu/careers/recruitment-process
+              - generic [ref=e510]: What to expect
+              - img [ref=e514]
+          - generic [ref=e519]:
+            - generic [ref=e521]:
+              - heading "Join our Talent Community" [level=4] [ref=e522]
+              - paragraph [ref=e523]: Sign up, and we’ll notify you about relevant positions, showcase the latest news, and keep you in mind for interesting opportunities.
+            - link "Sign up" [ref=e525] [cursor=pointer]:
+              - /url: /eu/careers/talent-community
+              - generic [ref=e526]: Sign up
+              - img [ref=e530]
+    - generic [ref=e533]:
+      - generic [ref=e536]:
+        - generic [ref=e537]:
+          - generic [ref=e540]:
+            - heading "Subscribe to our newsletter to stay up-to-date with the latest." [level=5] [ref=e543]
+            - link "Subscribe now" [ref=e546] [cursor=pointer]:
+              - /url: /eu/newsletter
+              - generic [ref=e547]: Subscribe now
+              - img [ref=e551]
+          - generic [ref=e553]:
+            - generic [ref=e554]:
+              - generic [ref=e555]: IMC
+              - generic [ref=e556]:
+                - link "Who we are" [ref=e557] [cursor=pointer]:
+                  - /url: /eu/who-we-are
+                  - generic [ref=e559]: Who we are
+                - link "What we do" [ref=e560] [cursor=pointer]:
+                  - /url: /eu/what-we-do
+                  - generic [ref=e562]: What we do
+                - link "Access our liquidity" [ref=e563] [cursor=pointer]:
+                  - /url: /eu/access-our-liquidity
+                  - generic [ref=e565]: Access our liquidity
+                - link "Strategic Investments" [ref=e566] [cursor=pointer]:
+                  - /url: /eu/strategic-investments
+                  - generic [ref=e568]: Strategic Investments
+                - link "Positive impact" [ref=e569] [cursor=pointer]:
+                  - /url: /eu/positive-impact
+                  - generic [ref=e571]: Positive impact
+                - link "Contact" [ref=e572] [cursor=pointer]:
+                  - /url: /eu/contact/offices
+                  - generic [ref=e574]: Contact
+                - link "Blogs" [ref=e575] [cursor=pointer]:
+                  - /url: /eu/blogs
+                  - generic [ref=e577]: Blogs
+                - link "Events" [ref=e578] [cursor=pointer]:
+                  - /url: /eu/events
+                  - generic [ref=e580]: Events
+                - link "Corporate news" [ref=e581] [cursor=pointer]:
+                  - /url: /eu/corporate-news
+                  - generic [ref=e583]: Corporate news
+            - generic [ref=e584]:
+              - generic [ref=e585]: Careers
+              - generic [ref=e586]:
+                - link "Careers overview" [ref=e587] [cursor=pointer]:
+                  - /url: /eu/careers
+                  - generic [ref=e589]: Careers overview
+                - link "Search careers" [ref=e590] [cursor=pointer]:
+                  - /url: /eu/search-careers
+                  - generic [ref=e592]: Search careers
+                - link "Experienced roles" [ref=e593] [cursor=pointer]:
+                  - /url: /eu/careers/experienced-roles
+                  - generic [ref=e595]: Experienced roles
+                - link "Students & graduates" [ref=e596] [cursor=pointer]:
+                  - /url: /eu/careers/students-graduates
+                  - generic [ref=e598]: Students & graduates
+                - link "Recruitment process" [ref=e599] [cursor=pointer]:
+                  - /url: /eu/careers/recruitment-process
+                  - generic [ref=e601]: Recruitment process
+                - link "Benefits" [ref=e602] [cursor=pointer]:
+                  - /url: /eu/careers/benefits
+                  - generic [ref=e604]: Benefits
+                - link "Talent community" [ref=e605] [cursor=pointer]:
+                  - /url: /eu/careers/talent-community
+                  - generic [ref=e607]: Talent community
+        - generic [ref=e608]:
+          - img [ref=e610]
+          - generic [ref=e638]:
+            - link "LinkedIn" [ref=e639] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/imc-trading
+              - button "LinkedIn" [ref=e640]:
+                - img [ref=e641]
+            - link "Instagram" [ref=e645] [cursor=pointer]:
+              - /url: https://www.instagram.com/imctrading/
+              - button "Instagram" [ref=e646]:
+                - img [ref=e647]
+            - link "Facebook" [ref=e650] [cursor=pointer]:
+              - /url: https://www.facebook.com/IMCTrading/
+              - button "Facebook" [ref=e651]:
+                - img [ref=e652]
+            - link "YouTube" [ref=e654] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCw-VMZIu0j-_IDIAh74Cm_A
+              - button "YouTube" [ref=e655]:
+                - img [ref=e656]
+      - separator [ref=e659]
+      - generic [ref=e662]:
+        - generic [ref=e663]: © 2025 IMC. All rights reserved.
+        - generic [ref=e664]:
+          - button "Cookie settings" [ref=e665] [cursor=pointer]:
+            - generic [ref=e667]: Cookie settings
+          - link "Privacy Policy" [ref=e668] [cursor=pointer]:
+            - /url: /eu/privacy-statement
+            - generic [ref=e670]: Privacy Policy
+          - link "Terms and Conditions" [ref=e671] [cursor=pointer]:
+            - /url: /eu/terms-conditions
+            - generic [ref=e673]: Terms and Conditions
+          - link "Disclaimer & Cookie Policy" [ref=e674] [cursor=pointer]:
+            - /url: /eu/disclaimer-cookie-policy
+            - generic [ref=e676]: Disclaimer & Cookie Policy
+          - link "Code of Conduct" [ref=e677] [cursor=pointer]:
+            - /url: /eu/careers/code-of-conduct
+            - generic [ref=e679]: Code of Conduct
+          - link "Notices" [ref=e680] [cursor=pointer]:
+            - /url: /eu/notices
+            - generic [ref=e682]: Notices
+          - link "Disclosures" [ref=e683] [cursor=pointer]:
+            - /url: /eu/disclosures
+            - generic [ref=e685]: Disclosures
+          - button "Europe" [ref=e687] [cursor=pointer]:
+            - img [ref=e688]
+            - generic [ref=e691]: Europe
+            - img [ref=e692]
+  - dialog

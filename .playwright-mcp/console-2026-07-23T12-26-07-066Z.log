@@ -1,0 +1,14 @@
+[   32751ms] [LOG] Cookie placed @ https://www.imc.com/_next/static/chunks/1716-a3f26e3e0dd8e232.js:18
+[   33357ms] [WARNING] [Meta Pixel] - Missing event name. Track events must be logged with an event name fbq("track", eventName) @ https://www.imc.com/_next/static/chunks/1716-a3f26e3e0dd8e232.js:18
+[   34165ms] [WARNING] [TikTok Pixel] - Missing 'content_id' paramter
+Issue: The 'content_id' parameter isn't being received. This is required for Video Shopping Ads (VSA).
+Suggestion: Include the 'content_id' parameter in your source code. This is required for Video Shopping Ads (VSA). See https://ads.tiktok.com/help/article/standard-events-parameters?redirected=2 for more information. @ https://www.imc.com/_next/static/chunks/1716-a3f26e3e0dd8e232.js:18
+[   54103ms] [WARNING] [TikTok Pixel] - Missing 'content_id' paramter
+Issue: The 'content_id' parameter isn't being received. This is required for Video Shopping Ads (VSA).
+Suggestion: Include the 'content_id' parameter in your source code. This is required for Video Shopping Ads (VSA). See https://ads.tiktok.com/help/article/standard-events-parameters?redirected=2 for more information. @ https://www.imc.com/_next/static/chunks/1716-a3f26e3e0dd8e232.js:18
+[   54295ms] [WARNING] [TikTok Pixel] - Duplicate Pixel ID
+Issue: The pixel ID is duplicate. This could impact the pixel data accuracy.
+Suggestion: Please double check and delete any unnecessary pixel code. @ https://www.imc.com/_next/static/chunks/1716-a3f26e3e0dd8e232.js:18
+[   54297ms] [WARNING] [TikTok Pixel] - Missing 'content_id' paramter
+Issue: The 'content_id' parameter isn't being received. This is required for Video Shopping Ads (VSA).
+Suggestion: Include the 'content_id' parameter in your source code. This is required for Video Shopping Ads (VSA). See https://ads.tiktok.com/help/article/standard-events-parameters?redirected=2 for more information. @ https://www.imc.com/_next/static/chunks/1716-a3f26e3e0dd8e232.js:18

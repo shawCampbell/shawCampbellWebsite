@@ -1,0 +1,326 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e6]:
+      - link "Go to homepage" [ref=e7] [cursor=pointer]:
+        - /url: /eu/
+        - img [ref=e8]
+      - list [ref=e36]:
+        - listitem [ref=e37]:
+          - link "Who we are" [ref=e38] [cursor=pointer]:
+            - /url: /eu/who-we-are
+            - generic [ref=e40]: Who we are
+        - listitem [ref=e41]:
+          - link "What we do" [ref=e42] [cursor=pointer]:
+            - /url: /eu/what-we-do
+            - generic [ref=e44]: What we do
+        - listitem [ref=e45]:
+          - link "Access our liquidity" [ref=e46] [cursor=pointer]:
+            - /url: /eu/access-our-liquidity
+            - generic [ref=e48]: Access our liquidity
+        - listitem [ref=e49]:
+          - link "Strategic Investments" [ref=e50] [cursor=pointer]:
+            - /url: /eu/strategic-investments
+            - generic [ref=e52]: Strategic Investments
+        - listitem [ref=e53]:
+          - link "Positive impact" [ref=e54] [cursor=pointer]:
+            - /url: /eu/positive-impact
+            - generic [ref=e56]: Positive impact
+      - link "Search Careers" [ref=e57] [cursor=pointer]:
+        - /url: /eu/search-careers
+        - generic [ref=e58]: Search Careers
+        - img [ref=e62]
+      - button "Open main menu" [ref=e64] [cursor=pointer]:
+        - img [ref=e65]
+    - generic [ref=e753]:
+      - link "Job Details" [ref=e755] [cursor=pointer]:
+        - /url: ./
+        - img [ref=e756]
+        - generic [ref=e759]: Job Details
+      - form "Job Application Form" [ref=e760]:
+        - generic [ref=e761]:
+          - heading "Personal Information" [level=5] [ref=e766]
+          - generic [ref=e767]:
+            - generic [ref=e771]:
+              - generic [ref=e772]:
+                - generic [ref=e773]: Resume/CV *
+                - generic [ref=e774]:
+                  - generic [ref=e775]: You can upload a .pdf, .doc, .docx, .txt or .rtf file.
+                  - generic [ref=e776]: Drag and drop or add a file.
+              - button "Choose File" [ref=e777] [cursor=pointer]:
+                - generic [ref=e778]: Choose File
+                - img [ref=e779]
+            - generic [ref=e782]:
+              - generic [ref=e784]: First Name *
+              - textbox "First Name *" [ref=e786]
+            - generic [ref=e788]:
+              - generic [ref=e790]: Last Name *
+              - textbox "Last Name *" [ref=e792]
+            - generic [ref=e794]:
+              - generic [ref=e796]: Email *
+              - textbox "Email *" [ref=e798]
+            - generic [ref=e800]:
+              - generic [ref=e802]: Phone *
+              - textbox "Phone *" [ref=e804]
+        - generic [ref=e805]:
+          - heading "Education" [level=5] [ref=e810]
+          - generic [ref=e811]:
+            - generic [ref=e813]:
+              - generic [ref=e814]: Education 1
+              - button "remove" [disabled] [ref=e815]:
+                - img [ref=e816]
+            - generic [ref=e819]:
+              - generic [ref=e821]: School Name *
+              - generic [ref=e823]:
+                - textbox "School Name *" [ref=e826]
+                - img [ref=e827]
+            - generic [ref=e830]:
+              - generic [ref=e832]: Degree *
+              - img [ref=e835]
+            - generic [ref=e838]:
+              - generic [ref=e840]: Discipline *
+              - generic [ref=e842]:
+                - textbox "Discipline *" [ref=e845]
+                - img [ref=e846]
+            - generic [ref=e849]:
+              - generic [ref=e851]: Start Year *
+              - textbox "Start Year *" [ref=e853]
+            - generic [ref=e855]:
+              - generic [ref=e857]: Start Month *
+              - generic [ref=e859]:
+                - textbox "Start Month *" [ref=e862]
+                - img [ref=e863]
+            - generic [ref=e866]:
+              - generic [ref=e868]: End Year *
+              - textbox "End Year *" [ref=e870]
+            - generic [ref=e872]:
+              - generic [ref=e874]: End Month *
+              - generic [ref=e876]:
+                - textbox "End Month *" [ref=e879]
+                - img [ref=e880]
+          - button "Add Education" [ref=e882] [cursor=pointer]:
+            - generic [ref=e883]: Add Education
+            - img [ref=e884]
+        - generic [ref=e886]:
+          - heading "Additional Questions" [level=5] [ref=e891]
+          - generic [ref=e892]:
+            - generic [ref=e894]:
+              - generic [ref=e896]: When did you graduate from High School? *
+              - generic [active] [ref=e897] [cursor=pointer]:
+                - img [ref=e1088]
+                - dialog [ref=e1090]:
+                  - list [ref=e1091]:
+                    - listitem [ref=e1092]:
+                      - generic [ref=e1094]: Before 2021
+                    - listitem [ref=e1095]:
+                      - generic [ref=e1097]: "2021"
+                    - listitem [ref=e1098]:
+                      - generic [ref=e1100]: "2022"
+                    - listitem [ref=e1101]:
+                      - generic [ref=e1103]: "2023"
+                    - listitem [ref=e1104]:
+                      - generic [ref=e1106]: "2024"
+                    - listitem [ref=e1107]:
+                      - generic [ref=e1109]: "2025"
+                    - listitem [ref=e1110]:
+                      - generic [ref=e1112]: "2026"
+            - generic [ref=e902]:
+              - generic [ref=e904]: "Select your Standardized Test score type: *"
+              - img [ref=e907]
+            - generic [ref=e910]:
+              - generic [ref=e912]: "Provide your best result on SAT: *"
+              - img [ref=e915]
+            - generic [ref=e918]:
+              - generic [ref=e920]: "Provide your best result on ACT: *"
+              - img [ref=e923]
+            - generic [ref=e926]:
+              - generic [ref=e928]: "When is your anticipated graduation date - please select a Graduation Date range: *"
+              - img [ref=e931]
+            - generic [ref=e934]:
+              - generic [ref=e936]: What is your GPA? *
+              - img [ref=e939]
+            - generic [ref=e942]:
+              - generic [ref=e944]: Will you require immigration sponsorship to begin working for IMC? *
+              - img [ref=e947]
+            - generic [ref=e950]:
+              - generic [ref=e952]: Will you require immigration sponsorship in the future to continue working for IMC? *
+              - img [ref=e955]
+            - generic [ref=e958]:
+              - generic [ref=e960]: Have you applied to this role or another role @IMC within the last 12-18 months? As a reminder, if you have already applied for this position during the current recruitment season and were not selected, you may reapply when the next recruitment season begins in 2027. *
+              - img [ref=e963]
+            - generic [ref=e966]:
+              - generic [ref=e968]: Do you currently have any offers? *
+              - img [ref=e971]
+            - generic [ref=e974]:
+              - generic [ref=e976]: If you answered "Yes" above, please specify relevant details (company name, job title, deadline date).
+              - textbox "If you answered \"Yes\" above, please specify relevant details (company name, job title, deadline date)." [ref=e977]
+            - generic [ref=e979]:
+              - generic [ref=e981]: Please provide your university email address. *
+              - textbox "Please provide your university email address. *" [ref=e983]
+            - generic [ref=e985]:
+              - generic [ref=e987]: "Please indicate which of the following machine learning libraries you are proficient with (select all that apply): *"
+              - img [ref=e990]
+            - generic [ref=e993]:
+              - generic [ref=e995]: Please select your current location. *
+              - generic [ref=e997]:
+                - textbox "Please select your current location. *" [ref=e1000]
+                - img [ref=e1001]
+            - generic [ref=e1004]:
+              - generic [ref=e1006]: What is your preferred work location? *
+              - img [ref=e1009]
+            - generic [ref=e1012]:
+              - generic [ref=e1014]: From the cities above, are there any other IMC locations you'd consider? Select up to 2. *
+              - img [ref=e1017]
+            - generic [ref=e1020]:
+              - generic [ref=e1022]: "Please list your PhD advisor(s) below:"
+              - textbox "Please list your PhD advisor(s) below:" [ref=e1023]
+            - generic [ref=e1025]:
+              - generic [ref=e1027]: Provide any relevant profile URLs (LinkedIn, Google Scholar, GitHub)
+              - textbox "Provide any relevant profile URLs (LinkedIn, Google Scholar, GitHub)" [ref=e1028]
+            - generic [ref=e1030]:
+              - generic [ref=e1032]: Privacy Statement *
+              - img [ref=e1035]
+              - paragraph [ref=e1039]:
+                - text: Please read the terms and conditions of the
+                - link "IMC Privacy Statement" [ref=e1040] [cursor=pointer]:
+                  - /url: https://www.imc.com/eu/privacy-statement/
+                - text: .
+            - generic [ref=e1042]:
+              - generic [ref=e1044]: Interview Code of Conduct *
+              - img [ref=e1047]
+              - generic [ref=e1050]:
+                - paragraph
+                - paragraph [ref=e1051]:
+                  - text: Please review and agree to the
+                  - link "IMC Interview Code of Conduct" [ref=e1052] [cursor=pointer]:
+                    - /url: https://www.imc.com/us/careers/code-of-conduct
+                  - text: before submitting your application.
+                - paragraph
+        - generic [ref=e1053]:
+          - generic [ref=e1056]:
+            - heading "IMC US Voluntary Disclosure" [level=5] [ref=e1058]
+            - generic [ref=e1061]:
+              - paragraph
+              - paragraph [ref=e1062]: IMC is an equal opportunity employer. IMC prohibits discrimination of any type and affords equal employment opportunities to applicants without regard to race, color, religion, sex, pregnancy, sexual orientation, gender identity and expression, national origin, age, disability, military or veteran status, status as a victim of domestic violence, and/or any other categories protected by applicable federal, state or local law. Completion of this section is voluntary and will not affect your opportunity for employment or the terms or conditions of your employment. The data collected from these questions will be stored separately from your individual application and will be kept confidential.
+          - generic [ref=e1065]:
+            - generic [ref=e1067]: What is your gender/gender identity?
+            - img [ref=e1070]
+          - generic [ref=e1074]:
+            - generic [ref=e1076]: What is your Race/Ethnicity?
+            - img [ref=e1079]
+        - button "Submit Application" [ref=e1081] [cursor=pointer]:
+          - generic [ref=e1082]: Submit Application
+          - img [ref=e1086]
+    - generic [ref=e533]:
+      - generic [ref=e536]:
+        - generic [ref=e537]:
+          - generic [ref=e540]:
+            - heading "Subscribe to our newsletter to stay up-to-date with the latest." [level=5] [ref=e543]
+            - link "Subscribe now" [ref=e546] [cursor=pointer]:
+              - /url: /eu/newsletter
+              - generic [ref=e547]: Subscribe now
+              - img [ref=e551]
+          - generic [ref=e553]:
+            - generic [ref=e554]:
+              - generic [ref=e555]: IMC
+              - generic [ref=e556]:
+                - link "Who we are" [ref=e557] [cursor=pointer]:
+                  - /url: /eu/who-we-are
+                  - generic [ref=e559]: Who we are
+                - link "What we do" [ref=e560] [cursor=pointer]:
+                  - /url: /eu/what-we-do
+                  - generic [ref=e562]: What we do
+                - link "Access our liquidity" [ref=e563] [cursor=pointer]:
+                  - /url: /eu/access-our-liquidity
+                  - generic [ref=e565]: Access our liquidity
+                - link "Strategic Investments" [ref=e566] [cursor=pointer]:
+                  - /url: /eu/strategic-investments
+                  - generic [ref=e568]: Strategic Investments
+                - link "Positive impact" [ref=e569] [cursor=pointer]:
+                  - /url: /eu/positive-impact
+                  - generic [ref=e571]: Positive impact
+                - link "Contact" [ref=e572] [cursor=pointer]:
+                  - /url: /eu/contact/offices
+                  - generic [ref=e574]: Contact
+                - link "Blogs" [ref=e575] [cursor=pointer]:
+                  - /url: /eu/blogs
+                  - generic [ref=e577]: Blogs
+                - link "Events" [ref=e578] [cursor=pointer]:
+                  - /url: /eu/events
+                  - generic [ref=e580]: Events
+                - link "Corporate news" [ref=e581] [cursor=pointer]:
+                  - /url: /eu/corporate-news
+                  - generic [ref=e583]: Corporate news
+            - generic [ref=e584]:
+              - generic [ref=e585]: Careers
+              - generic [ref=e586]:
+                - link "Careers overview" [ref=e587] [cursor=pointer]:
+                  - /url: /eu/careers
+                  - generic [ref=e589]: Careers overview
+                - link "Search careers" [ref=e590] [cursor=pointer]:
+                  - /url: /eu/search-careers
+                  - generic [ref=e592]: Search careers
+                - link "Experienced roles" [ref=e593] [cursor=pointer]:
+                  - /url: /eu/careers/experienced-roles
+                  - generic [ref=e595]: Experienced roles
+                - link "Students & graduates" [ref=e596] [cursor=pointer]:
+                  - /url: /eu/careers/students-graduates
+                  - generic [ref=e598]: Students & graduates
+                - link "Recruitment process" [ref=e599] [cursor=pointer]:
+                  - /url: /eu/careers/recruitment-process
+                  - generic [ref=e601]: Recruitment process
+                - link "Benefits" [ref=e602] [cursor=pointer]:
+                  - /url: /eu/careers/benefits
+                  - generic [ref=e604]: Benefits
+                - link "Talent community" [ref=e605] [cursor=pointer]:
+                  - /url: /eu/careers/talent-community
+                  - generic [ref=e607]: Talent community
+        - generic [ref=e608]:
+          - img [ref=e610]
+          - generic [ref=e638]:
+            - link "LinkedIn" [ref=e639] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/imc-trading
+              - button "LinkedIn" [ref=e640]:
+                - img [ref=e641]
+            - link "Instagram" [ref=e645] [cursor=pointer]:
+              - /url: https://www.instagram.com/imctrading/
+              - button "Instagram" [ref=e646]:
+                - img [ref=e647]
+            - link "Facebook" [ref=e650] [cursor=pointer]:
+              - /url: https://www.facebook.com/IMCTrading/
+              - button "Facebook" [ref=e651]:
+                - img [ref=e652]
+            - link "YouTube" [ref=e654] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCw-VMZIu0j-_IDIAh74Cm_A
+              - button "YouTube" [ref=e655]:
+                - img [ref=e656]
+      - separator [ref=e659]
+      - generic [ref=e662]:
+        - generic [ref=e663]: © 2025 IMC. All rights reserved.
+        - generic [ref=e664]:
+          - button "Cookie settings" [ref=e665] [cursor=pointer]:
+            - generic [ref=e667]: Cookie settings
+          - link "Privacy Policy" [ref=e668] [cursor=pointer]:
+            - /url: /eu/privacy-statement
+            - generic [ref=e670]: Privacy Policy
+          - link "Terms and Conditions" [ref=e671] [cursor=pointer]:
+            - /url: /eu/terms-conditions
+            - generic [ref=e673]: Terms and Conditions
+          - link "Disclaimer & Cookie Policy" [ref=e674] [cursor=pointer]:
+            - /url: /eu/disclaimer-cookie-policy
+            - generic [ref=e676]: Disclaimer & Cookie Policy
+          - link "Code of Conduct" [ref=e677] [cursor=pointer]:
+            - /url: /eu/careers/code-of-conduct
+            - generic [ref=e679]: Code of Conduct
+          - link "Notices" [ref=e680] [cursor=pointer]:
+            - /url: /eu/notices
+            - generic [ref=e682]: Notices
+          - link "Disclosures" [ref=e683] [cursor=pointer]:
+            - /url: /eu/disclosures
+            - generic [ref=e685]: Disclosures
+          - button "Europe" [ref=e687] [cursor=pointer]:
+            - img [ref=e688]
+            - generic [ref=e691]: Europe
+            - img [ref=e692]
+  - dialog
+  - alert [ref=e725]: Graduate Machine Learning Researcher | IMC Trading
+  - generic: We use cookies
